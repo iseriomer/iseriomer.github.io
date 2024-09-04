@@ -230,7 +230,7 @@ nav ul li a:hover {
     top: 0;
     height: 100%;
     width: 5px;
-    background: linear-gradient(180deg, #007BFF, #0056b3); /* Vertical gradient border */
+    background: linear-gradient(180deg, #ffffff, #ffffff); /* Vertical gradient border */
     transition: width 0.3s ease; /* Smooth transition for gradient */
 }
 
@@ -246,7 +246,7 @@ nav ul li a:hover {
 }
 
 .timeline-item:hover h3 {
-    color: #ffffff; /* Color change on hover to match gradient */
+    color: #0056b3; /* Color change on hover to match gradient */
 }
 
 
