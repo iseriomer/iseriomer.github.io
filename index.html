@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ömer Faruk İşeri - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div class="container">
+                <h1 class="logo">Ömer Faruk İşeri</h1>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section class="hero">
+            <div class="container">
+                <h2>Welcome to My Portfolio</h2>
+                <p>Showcasing my work in AI, NLP, and software engineering.</p>
+                <a href="#projects" class="cta-button">See My Work</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I am a computer science student passionate about AI and natural language processing. With hands-on experience in building and deploying AI-driven applications, I am always eager to explore new technologies and solve complex problems.</p>
+            </div>
+        </section>
+
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="rag-project.png" alt="RAG Project With Gradio">
+                        <div class="project-info">
+                            <h3>RAG Project With Gradio</h3>
+                            <p>August-September 2024</p>
+                            <ul>
+                                <li>Developed a RAG application using Python, Gradio, LangChain, OpenAI's GPT models, FAISS, and PyMuPDF.</li>
+                                <li>Implemented a Gradio-based UI for document uploading and NLP model customization.</li>
+                                <li>Optimized document handling with caching and deployed the app for interactive exploration.</li>
+                            </ul>
+                            <a href="https://github.com/iseriomer/Simple-RAG-Project" class="project-button" target="_blank">View Details</a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <img src="chatbot-project.png" alt="Intelligent Document Processing Chatbot">
+                        <div class="project-info">
+                            <h3>Intelligent Document Processing Chatbot Using Chainlit</h3>
+                            <p>August-September 2024</p>
+                            <ul>
+                                <li>Developed a document processing chatbot with Python, LangChain, Chainlit, and OpenAI's GPT models.</li>
+                                <li>Implemented custom text extraction and context-aware question-answering.</li>
+                                <li>Deployed on AWS EC2 with Docker and set up CI/CD pipelines using GitHub Actions.</li>
+                            </ul>
+                            <a href="https://github.com/iseriomer/Chainlit-RAG-Project" class="project-button" target="_blank">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="experience">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>GoLive - Intern (Full-time)</h3>
+                        <p><strong>İstanbul, Turkey</strong> | August-September 2024</p>
+                        <ul>
+                            <li>Developed a fully functional RAG project using Python with LangChain, Chainlit, OpenAI API, and PyMuPDF libraries.</li>
+                            <li>Deployed the project on AWS EC2 using Docker.</li>
+                            <li>Implemented CI/CD pipelines with GitHub Actions for automated testing and deployment.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Contact</h2>
+                <form id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <button id="scrollToTop" title="Go to top"></button>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; 2024 Ömer Faruk İşeri. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" target="_blank" class="social-icon">
+                    <img src="linkedin.png" alt="LinkedIn" class="social-image">
+                </a>
+                <a href="https://github.com/iseriomer" target="_blank" class="social-icon">
+                    <img src="github-logo.png" alt="GitHub" class="social-image">
+                </a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

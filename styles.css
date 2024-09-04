@@ -1,0 +1,427 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px; /* Add a maximum width to avoid overly wide content */
+}
+
+/* Header */
+header {
+    position: relative;
+    color: #fff;
+    background: linear-gradient(to right, #007BFF, #00d084);
+    padding: 0; /* Remove padding as it's handled by the hero section */
+    text-align: center;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 0;
+    transition: background 0.3s;
+    z-index: 10; /* Ensure the navigation is above other content */
+}
+
+nav.sticky {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+nav .logo {
+    font-size: 2rem;
+    color: #fff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00d084;
+}
+
+/* Hero Section */
+.hero {
+    background: url('hero.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 120px 0;
+    position: relative; /* Ensure positioning is relative to the container */
+    text-align: center;
+    animation: gradientAnimation 10s infinite;
+
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    background: #00d084;
+    color: #fff;
+    padding: 15px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background: #03a66a;
+    transform: scale(1.05);
+}
+
+
+/* About Section */
+.about {
+    background: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.about p {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+}
+
+/* Projects */
+.projects {
+    background: #fff;
+    padding: 50px 0;
+}
+
+.projects-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.project-card {
+    position: relative;
+    width: calc(33% - 20px);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    transition: opacity 0.3s;
+}
+
+.project-card:hover img {
+    opacity: 0.8;
+}
+
+.project-info {
+    padding: 20px;
+    background: #fff;
+}
+
+.project-info h3 {
+    margin-top: 0;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.project-info p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.project-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.project-info ul li {
+    margin-bottom: 10px;
+}
+
+.project-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.project-button:hover {
+    background: #0056b3;
+}
+
+
+/* Experience */
+.experience {
+    background: #f4f4f4;
+    padding: 50px 0;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-item {
+    margin-bottom: 20px;
+    padding: 30px; /* Increased padding for better spacing */
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; /* Slightly rounded corners for a modern look */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Smooth transitions */
+    position: relative;
+    overflow: hidden; /* To hide any overflowing child elements */
+}
+
+.timeline-item:hover {
+    transform: translateY(-10px) scale(1.03); /* Hover effect with slight lift and scale */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15); /* Enhanced shadow effect */
+    background-color: #e8f0ff; /* Subtle background color change on hover */
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 5px;
+    background: linear-gradient(180deg, #007BFF, #0056b3); /* Vertical gradient border */
+    transition: width 0.3s ease; /* Smooth transition for gradient */
+}
+
+.timeline-item:hover::before {
+    width: 10px; /* Slightly expands the gradient border on hover */
+}
+
+.timeline-item h3 {
+    margin-top: 0;
+    font-size: 1.6rem; /* Slightly larger font size for prominence */
+    color: #333;
+    transition: color 0.3s ease; /* Smooth color transition for text */
+}
+
+.timeline-item:hover h3 {
+    color: #0056b3; /* Color change on hover to match gradient */
+}
+
+
+
+/* Contact Form */
+.contact {
+    background: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.contact button {
+    background: #007BFF;
+    color: #fff;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.contact button:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #f4f4f4; /* Background color for footer */
+    padding: 20px 0; /* Padding for top and bottom */
+    text-align: center; /* Center align all text inside the footer */
+    border-top: 1px solid #ddd; /* Subtle top border */
+}
+
+.footer-container {
+    max-width: 1200px; /* Maximum width of the footer content */
+    margin: 0 auto; /* Center the content */
+    padding: 0 20px; /* Horizontal padding */
+    text-align: center; /* Center align text in footer container */
+}
+
+.footer-container p {
+    margin: 0; /* Remove margin from paragraph */
+    font-size: 1rem; /* Font size */
+    color: #333; /* Text color */
+    margin-bottom: 10px; /* Space below the text */
+    display: inline-block; /* Make the paragraph an inline block */
+    text-align: center; /* Center align the text */
+}
+
+
+.social-links {
+    display: flex; /* Align items horizontally */
+    gap: 20px; /* Space between icons */
+    justify-content: center; /* Center the icons */
+    margin-top: 20px; /* Add some spacing from the content above */
+}
+
+.social-icon {
+    display: inline-block; /* Display links as inline blocks */
+    width: 40px; /* Size of the icon */
+    height: 40px; /* Size of the icon */
+    overflow: hidden; /* Ensure no overflow */
+    border-radius: 50%; /* Circular icons */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition effects */
+}
+
+.social-icon:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.social-image {
+    width: 100%; /* Ensure image fits in the container */
+    height: 100%; /* Ensure image fits in the container */
+    object-fit: cover; /* Cover the entire circle */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+}
+
+.social-icon:hover .social-image {
+    opacity: 0.8; /* Slightly dim the image on hover */
+}
+.parallax {
+    background-image: url('background.jpg');
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+@keyframes gradientAnimation {
+    0% { background-color: #ff7e5f; }
+    50% { background-color: #feb47b; }
+    100% { background-color: #ff7e5f; }
+}
+
+.hero {
+    animation: gradientAnimation 10s infinite;
+}
+.project-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background: #0056b3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Scroll to Top Button */
+#scrollToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #0056b3; /* Main color */
+    color: #fff;
+    border: none;
+    border-radius: 10px; /* Smooth square with rounded corners */
+    cursor: pointer;
+    opacity: 0; /* Start with opacity 0 for smooth fade-in */
+    visibility: hidden; /* Start with visibility hidden */
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out, transform 0.3s ease-in-out; /* Transition for opacity, visibility, and scaling */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px; /* Icon size */
+}
+
+#scrollToTop.show {
+    opacity: 1; /* Full opacity for visible button */
+    visibility: visible; /* Make the button visible */
+    transform: scale(1); /* No scaling */
+}
+
+#scrollToTop:hover {
+    background-color: #004494; /* Slightly darker shade on hover */
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Slightly larger shadow on hover */
+}
+
+/* Up Arrow Icon */
+#scrollToTop::before {
+    content: '▲'; /* Up arrow icon */
+    font-family: Arial, sans-serif;
+    font-size: 24px; /* Larger icon */
+    font-weight: bold;
+}
+
+
+
+
+/* Animations */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
