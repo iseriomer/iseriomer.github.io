@@ -230,7 +230,7 @@ nav ul li a:hover {
     top: 0;
     height: 100%;
     width: 5px;
-    background: linear-gradient(180deg, #ffffff, #ffffff); /* Vertical gradient border */
+    background: linear-gradient(180deg, #007BFF, #0056b3); /* Vertical gradient border */
     transition: width 0.3s ease; /* Smooth transition for gradient */
 }
 
@@ -424,4 +424,112 @@ footer {
 @keyframes gradientAnimation {
     0% { background-position: 0% 0%; }
     100% { background-position: 100% 100%; }
+}
+/* Media Queries */
+
+/* For tablets and small desktops */
+@media (max-width: 1024px) {
+    .hero h2 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding: 20px;
+    }
+
+    .contact form {
+        padding: 0 20px;
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        display: block;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100%;
+    }
+
+    .timeline-item {
+        padding: 15px;
+    }
+
+    .contact form {
+        padding: 0 10px;
+    }
+
+    .footer-container {
+        padding: 0 10px;
+    }
+
+    .social-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 1rem;
+    }
+}
+
+/* For very small screens */
+@media (max-width: 480px) {
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .contact input,
+    .contact textarea {
+        font-size: 0.9rem;
+    }
+
+    .contact button {
+        font-size: 0.9rem;
+        padding: 10px 20px;
+    }
+
+    .social-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 0.8rem;
+    }
 }
