@@ -255,7 +255,7 @@ nav ul li a:hover {
 }
 
 .timeline-item:hover h3 {
-    color: #0056b3; /* Color change on hover to match gradient */
+    color: #000000; /* Color change on hover to match gradient */
 }
 
 
@@ -465,18 +465,33 @@ footer {
 
 /* For mobile devices */
 @media (max-width: 768px) {
+    nav {
+        padding: 10px 20px; /* Adjust padding for mobile */
+    }
+
     .container {
         width: 90%;
+        display: flex;
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    nav .logo {
+        margin-bottom: 10px; /* Add spacing for logo */
     }
 
     nav ul {
-        display: block;
-        padding: 10px 0;
+        display: block; /* Vertical layout for mobile */
+        text-align: center; /* Center align menu */
     }
 
     nav ul li {
-        display: block;
+        display: block; /* Stack menu items vertically */
         margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2rem; /* Larger font for better readability */
     }
 
     .hero h2 {
