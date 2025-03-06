@@ -3,18 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ömer Faruk İşeri - Portfolio</title>
+    <meta name="description" content="Ömer Faruk İşeri - Showcasing my work in AI, NLP, software engineering and games.">
+    <title>Ömer Faruk İşeri | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="online-resume.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch" for="theme-switch">
+            <input type="checkbox" id="theme-switch" />
+            <span class="slider"></span>
+        </label>
+        
+    </div>
     
     <header>
         <nav>
             <div class="container">
-                <h1 class="logo">Ömer Faruk İşeri</h1>
+                <a href="#" class="logo">Ömer Faruk İşeri</a>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -23,9 +35,9 @@
         </nav>
         <section class="hero">
             <div class="container">
-                <h2>Welcome to My Portfolio</h2>
-                <p>Showcasing my work in AI, NLP, software engineering and games.</p>
-                <a href="#projects" class="cta-button">See My Work</a>
+                <h2>Showcasing my work in AI, NLP, software engineering and games.</h2>
+                <p>Building cutting-edge AI solutions and elegant web applications with expertise in natural language processing, machine learning, and modern web technologies.</p>
+                <a href="#projects" class="cta-button">Explore My Work</a>
             </div>
         </section>
     </header>
@@ -33,14 +45,63 @@
     <main>
         <section id="about" class="about">
             <div class="container">
-                <h2>About Me</h2>
+                <h2 class="section-title">About Me</h2>
                 <p>I am a computer science student passionate about AI and natural language processing. With hands-on experience in building and deploying AI-driven applications, I am always eager to explore new technologies and solve complex problems.</p>
+                <p>I believe in creating technology that not only solves complex problems but also delivers exceptional user experiences. Throughout my career, I've worked with leading organizations to architect and deploy AI-driven applications that transform how businesses operate and engage with their customers.</p>
+            </div>
+        </section>
+        
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2 class="section-title">Technical Expertise</h2>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <h3>AI & Machine Learning</h3>
+                        <ul class="skill-list">
+                            <li>Natural Language Processing</li>
+                            <li>Large Language Models (GPT, LLaMA)</li>
+                            <li>Retrieval Augmented Generation (RAG)</li>
+                            <li>Vector Databases & Embeddings</li>
+                            <li>TensorFlow & PyTorch</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Backend Development</h3>
+                        <ul class="skill-list">
+                            <li>Python (Flask, FastAPI)</li>
+                            <li>Node.js (Express)</li>
+                            <li>RESTful API Design</li>
+                            <li>Database Design (SQL, NoSQL)</li>
+                            <li>Cloud Services (AWS, GCP)</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>Frontend Development</h3>
+                        <ul class="skill-list">
+                            <li>JavaScript/TypeScript</li>
+                            <li>React.js & Next.js</li>
+                            <li>Modern CSS (Tailwind, SCSS)</li>
+                            <li>Responsive Web Design</li>
+                            <li>UI/UX Principles</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3>DevOps & Tools</h3>
+                        <ul class="skill-list">
+                            <li>Docker & Kubernetes</li>
+                            <li>CI/CD Pipelines</li>
+                            <li>Git & Version Control</li>
+                            <li>Infrastructure as Code</li>
+                            <li>Monitoring & Logging</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <section id="projects" class="projects">
             <div class="container">
-                <h2>Projects</h2>
+                <h2 class="section-title">Featured Projects</h2>
                 <div class="projects-grid">
                     <div class="project-card">
                         <img src="rag-project.png" alt="RAG Project With Gradio">
