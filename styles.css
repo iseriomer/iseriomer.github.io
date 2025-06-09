@@ -371,13 +371,115 @@ nav.sticky {
   }
   
   /* Projects Section with Advanced 3D Cards */
-.projects {
+.ai-projects {
     padding: 120px 0;
     background: var(--bg-light);
     position: relative;
     transition: background-color 0.3s ease;
 }
 
+.game-projects {
+    padding: 120px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+[data-theme="dark"] .game-projects {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+/* Section Header Styles */
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Tech Tags */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 15px 0 20px 0;
+}
+
+.tech-tag {
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--primary);
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid rgba(37, 99, 235, 0.2);
+}
+
+[data-theme="dark"] .tech-tag {
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+
+/* Game Button Style */
+.game-button {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border: none;
+}
+
+.game-button:hover {
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+}
+
+.game-button::before {
+    background: #047857;
+}
+/* youtube Button Style */
+.youtube-button {
+    background: linear-gradient(135deg, #10b981, #059669);
+    border: none;
+}
+
+.youtube-button:hover {
+    box-shadow: 0 10px 25px rgba(16, 185, 129, 0.4);
+}
+
+.youtube-button::before {
+    background: #047857;
+}
+
+
+/* AI Projects Icon Animation */
+.ai-projects .section-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+/* Game Projects Icon Animation */
+.game-projects .section-icon {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
@@ -891,6 +993,20 @@ nav.sticky {
     .contact form {
       padding: 25px;
     }
+    .section-icon {
+        font-size: 2.5rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+    }
+    
+    .tech-tag {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+    
+
   }
   
   @media (max-width: 480px) {

@@ -141,8 +141,8 @@ function initScrollAnimations() {
         });
     }, { threshold: 0.1 });
     
-    document.querySelectorAll('.section, .project-card').forEach(el => {
-        observer.observe(el);
+    document.querySelectorAll('.section, .project-card, .ai-projects, .game-projects').forEach(el => {
+    observer.observe(el);
     });
 }
 

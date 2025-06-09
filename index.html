@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ömer Faruk İşeri - Showcasing my work in AI, NLP, software engineering and games.">
+    <meta name="description" content="Ömer Faruk İşeri - AI, game development, and software engineering portfolio">
     <title>Ömer Faruk İşeri | Portfolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="online-resume.png" type="image/png">
@@ -27,7 +27,8 @@
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#ai-projects">AI & Software</a></li>
+                    <li><a href="#game-projects">Game Dev</a></li>
                     <li><a href="#experience">Experience</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -35,9 +36,9 @@
         </nav>
         <section class="hero">
             <div class="container">
-                <h2>Showcasing my work in AI, LLM engineering, and software development</h2>
-                <p>Computer Science student specializing in RAG systems, LLM prompt optimization, and intelligent chatbot development with expertise in AWS deployment and CI/CD pipelines.</p>
-                <a href="#projects" class="cta-button">Explore My Work</a>
+                <h2>Computer Science Student & Software Developer</h2>
+                <p>I’m a Computer Science student passionate about AI and game development. I work on language models, chatbot systems, and games.</p>
+                <a href="#ai-projects" class="cta-button">Explore My Work</a>
             </div>
         </section>
     </header>
@@ -46,8 +47,8 @@
         <section id="about" class="about">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
-                <p>I am a Computer Science student at Istanbul University-Cerrahpasa (expected graduation: June 2025), passionate about artificial intelligence and language models. With hands-on experience in developing RAG systems and optimizing LLM prompts, I've improved model accuracy by significant margins while working on real-world applications.</p>
-                <p>My expertise spans from developing document processing systems to creating automated test frameworks for chatbots. I'm proficient in cloud deployment using AWS and Docker, with experience implementing CI/CD pipelines to streamline development workflows. I'm fluent in Turkish and English, with basic knowledge of French.</p>
+                <p>I am a Computer Science student at Istanbul University-Cerrahpasa (graduating June 2025) with expertise in artificial intelligence, software development, and system optimization. Through internships at GoLive and Carbon Consulting, I've developed production-ready RAG systems, optimized LLM performance, and built automated testing frameworks that significantly improved system accuracy.</p>
+                <p>My technical foundation spans machine learning implementation, cloud deployment with AWS and Docker, and CI/CD pipeline development. I have proven experience in prompt engineering, achieving accuracy improvements from 70% to 94% in enterprise applications, and building scalable document processing systems. I am fluent in Turkish and English with basic French proficiency.</p>
             </div>
         </section>
         
@@ -99,72 +100,126 @@
             </div>
         </section>
 
-        <section id="projects" class="projects">
+        <!-- AI & Software Engineering Projects -->
+        <section id="ai-projects" class="ai-projects">
             <div class="container">
-                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-header">
+                    <div class="section-icon">🤖</div>
+                    <h2 class="section-title">AI, NLP & Software Engineering</h2>
+                    <p class="section-description">Developing production-ready AI systems with focus on document processing, conversational AI, and intelligent automation. These projects demonstrate full-stack development capabilities and real-world problem solving:</p>
+                </div>
                 <div class="projects-grid">
                     <div class="project-card">
                         <img src="rag-project.png" alt="RAG Project With Gradio">
                         <div class="project-info">
                             <h3>RAG Project With Gradio</h3>
-                            <p>August-September 2024</p>
+                            <p class="project-date">August-September 2024</p>
                             <ul>
                                 <li>Developed a RAG application using Python, Gradio, LangChain, OpenAI's GPT models, FAISS, and PyMuPDF.</li>
                                 <li>Implemented a Gradio-based UI for document uploading and NLP model customization.</li>
                                 <li>Optimized document handling with caching and deployed the app for interactive exploration.</li>
                             </ul>
-                            <a href="https://github.com/iseriomer/Simple-RAG-Project" class="project-button" target="_blank">View Details</a>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">OpenAI API</span>
+                                <span class="tech-tag">FAISS</span>
+                            </div>
+                            <a href="https://github.com/iseriomer/Simple-RAG-Project" class="project-button" target="_blank">View on GitHub</a>
                         </div>
                     </div>
+                    
                     <div class="project-card">
                         <img src="chatbot-project.png" alt="Intelligent Document Processing Chatbot">
                         <div class="project-info">
-                            <h3>Intelligent Document Processing Chatbot Using Chainlit</h3>
-                            <p>August-September 2024</p>
+                            <h3>Intelligent Document Processing Chatbot</h3>
+                            <p class="project-date">August-September 2024</p>
                             <ul>
                                 <li>Developed a document processing chatbot with Python, LangChain, Chainlit, and OpenAI's GPT models.</li>
                                 <li>Implemented custom text extraction and context-aware question-answering.</li>
                                 <li>Deployed on AWS EC2 with Docker and set up CI/CD pipelines using GitHub Actions.</li>
                             </ul>
-                            <a href="https://github.com/iseriomer/Chainlit-RAG-Project" class="project-button" target="_blank">View Details</a>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Chainlit</span>
+                                <span class="tech-tag">AWS EC2</span>
+                                <span class="tech-tag">Docker</span>
+                            </div>
+                            <a href="https://github.com/iseriomer/Chainlit-RAG-Project" class="project-button" target="_blank">View on GitHub</a>
                         </div>
                     </div>
+                    
                     <div class="project-card">
-                        <img src="combat-craze.png" alt="Combat Craze">
+                        <img src="which-country-screenshot.png" alt="Which Country Quiz">
                         <div class="project-info">
-                            <h3>Combat Craze</h3>
-                            <p>April-May 2024</p>
+                            <h3>Which Country? - Educational Quiz</h3>
+                            <p class="project-date">March 2024</p>
                             <ul>
-                                <li>Developed a thrilling roguelike, fast-paced movement FPS game using Unity3D, where every moment is a fight for survival.</li>
-                                <li>Designed diverse enemies such as shambling undead, explosive flying bombs, menacing aerial bombers, and relentless machine gun drones.</li>
-                                <li>Implemented a scoring system to unlock powerful perks, weapons, and upgrades, adding a strategic layer to the gameplay.</li>
+                                <li>Developed an educational web-based quiz comparing country statistics using Python/Flask and REST Countries API.</li>
+                                <li>Implemented responsive frontend with interactive flag displays and animated transitions.</li>
+                                <li>Integrated SQLAlchemy for data persistence and leaderboard functionality.</li>
                             </ul>
-                            <a href="https://pandlebury.itch.io/combat-craze" class="project-button" target="_blank">View Details</a>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Flask</span>
+                                <span class="tech-tag">SQLAlchemy</span>
+                                <span class="tech-tag">REST API</span>
+                            </div>
+                            <a href="http://which-country-production.up.railway.app" class="project-button" target="_blank">Try Live Demo</a>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Game Development Projects -->
+        <section id="game-projects" class="game-projects">
+            <div class="container">
+                <div class="section-header">
+                    <div class="section-icon">🎮</div>
+                    <h2 class="section-title">Game Development & Design</h2>
+                    <p class="section-description">Creating interactive experiences through game development, focusing on procedural systems and engaging gameplay mechanics. Below are my personal game projects built from the ground up:</p>
+                </div>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <img src="hellraze.png" alt="Hellraze">
+                        <div class="project-info">
+                            <h3>🎮 HELLRAZE</h3>
+                            <p class="project-date">Solo Unity Project - In Development (Playable Demo)</p>
+                            <ul>
+                                <li>Developing a roguelike FPS featuring advanced procedural level generation and dynamic combat systems in Unity 3D.</li>
+                                <li>Implemented comprehensive weapon systems (revolvers, shotguns, flamethrowers) with balanced gameplay mechanics and player progression.</li>
+                                <li>Designed modular architecture supporting scalable content generation and performance optimization for smooth gameplay experience.</li>
+                                <li>Created engaging boss encounter systems using state machines and AI programming with regular community feedback integration.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Unity 3D</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Procedural Generation</span>
+                                <span class="tech-tag">Game Design</span>
+                            </div>
+                            <a href="https://pandlebury.itch.io/hellraze" class="project-button game-button" target="_blank">🎮 Play Demo</a>
+                            <a href="https://www.youtube.com/watch?v=UYMKFRnzrrQ&ab_channel=pandledev" class="project-button youtube-button" target="_blank">📺 Watch Trailer</a>
+                        </div>
+                    </div>
+                    
                     <div class="project-card">
                         <img src="neon-ascent.jpg" alt="Neon Ascent">
                         <div class="project-info">
                             <h3>Neon Ascent</h3>
-                            <p>April-May 2024</p>
+                            <p class="project-date">April-May 2024</p>
                             <ul>
-                                <li>Created a 2D platformer game with pixel art aesthetics and a high-score challenge, playable on HTML5 and Android platforms.</li>
-                                <li>Released an updated Android version with improved features, leveraging player feedback to refine game mechanics.</li>
+                                <li>Created a 2D platformer game with pixel art aesthetics and high-score challenge mechanics.</li>
+                                <li>Released on both HTML5 and Android platforms with optimized performance.</li>
+                                <li>Implemented player feedback system to refine game mechanics and user experience.</li>
                             </ul>
-                            <a href="https://pandlebury.itch.io/neon-jump" class="project-button" target="_blank">View Details</a>
-                        </div>
-                    </div>
-                    <div class="project-card">
-                        <img src="which-country-screenshot.png" alt="Neon Ascent">
-                        <div class="project-info">
-                            <h3>Which Country?</h3>
-                            <p>March 2024</p>
-                            <ul>
-                                <li>Developed an educational web-based quiz comparing country statistics using Python/Flask and REST Countries API, featuring dynamic question generation and score tracking.</li>
-                                <li>Implemented a responsive frontend with interactive flag displays and animated transitions, supporting population/area/border comparisons between randomly selected nations.</li>
-                                <li>Integrated SQLAlchemy for data persistence, including automatic API-based database population and leaderboard functionality with score rankings.</li>
-                            </ul>                 
-                            <a href="http://which-country-production.up.railway.app" class="project-button" target="_blank">Try Out</a>
+                            <div class="project-tech">
+                                <span class="tech-tag">Unity 2D</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">Pixel Art</span>
+                                <span class="tech-tag">Mobile</span>
+                            </div>
+                            <a href="https://pandlebury.itch.io/neon-jump" class="project-button game-button" target="_blank">🎮 Play Game</a>
                         </div>
                     </div>
                 </div>
