@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Ömer Faruk İşeri - AI, game development, and software engineering portfolio">
     <title>Ömer Faruk İşeri | Portfolio</title>
+    <script>
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+    <noscript>
+      <style>
+        .section { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="online-resume.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -14,7 +29,8 @@
 <body>
     <div class="theme-switch-wrapper">
         <label class="theme-switch" for="theme-switch">
-            <input type="checkbox" id="theme-switch" />
+            <span class="visually-hidden">Toggle dark mode</span>
+            <input type="checkbox" id="theme-switch" aria-label="Toggle dark mode" />
             <span class="slider"></span>
         </label>
         
@@ -24,7 +40,10 @@
         <nav>
             <div class="container">
                 <a href="#" class="logo">Ömer Faruk İşeri</a>
-                <ul>
+                <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
+                    <span></span><span></span><span></span>
+                </button>
+                <ul id="primary-navigation" class="nav-list">
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#ai-projects">AI & Software</a></li>
@@ -44,7 +63,7 @@
     </header>
 
     <main>
-        <section id="about" class="about">
+        <section id="about" class="about section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
                 <p>I am a Computer Science student at Istanbul University-Cerrahpasa (graduating June 2025) with expertise in artificial intelligence, software development, and system optimization. Through internships at GoLive and Carbon Consulting, I've developed production-ready RAG systems, optimized LLM performance, and built automated testing frameworks that significantly improved system accuracy.</p>
@@ -52,7 +71,7 @@
             </div>
         </section>
         
-        <section id="skills" class="skills">
+        <section id="skills" class="skills section">
             <div class="container">
                 <h2 class="section-title">Technical Expertise</h2>
                 <div class="skills-grid">
@@ -101,7 +120,7 @@
         </section>
 
         <!-- AI & Software Engineering Projects -->
-        <section id="ai-projects" class="ai-projects">
+        <section id="ai-projects" class="ai-projects section">
             <div class="container">
                 <div class="section-header">
                     <div class="section-icon">🤖</div>
@@ -110,7 +129,7 @@
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="rag-project.png" alt="RAG Project With Gradio">
+                        <img src="rag-project.png" alt="RAG Project With Gradio" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>RAG Project With Gradio</h3>
                             <p class="project-date">August-September 2024</p>
@@ -125,12 +144,12 @@
                                 <span class="tech-tag">OpenAI API</span>
                                 <span class="tech-tag">FAISS</span>
                             </div>
-                            <a href="https://github.com/iseriomer/Simple-RAG-Project" class="project-button" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/iseriomer/Simple-RAG-Project" class="project-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                     </div>
                     
                     <div class="project-card">
-                        <img src="chatbot-project.png" alt="Intelligent Document Processing Chatbot">
+                        <img src="chatbot-project.png" alt="Intelligent Document Processing Chatbot" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>Intelligent Document Processing Chatbot</h3>
                             <p class="project-date">August-September 2024</p>
@@ -145,12 +164,12 @@
                                 <span class="tech-tag">AWS EC2</span>
                                 <span class="tech-tag">Docker</span>
                             </div>
-                            <a href="https://github.com/iseriomer/Chainlit-RAG-Project" class="project-button" target="_blank">View on GitHub</a>
+                            <a href="https://github.com/iseriomer/Chainlit-RAG-Project" class="project-button" target="_blank" rel="noopener noreferrer">View on GitHub</a>
                         </div>
                     </div>
                     
                     <div class="project-card">
-                        <img src="which-country-screenshot.png" alt="Which Country Quiz">
+                        <img src="which-country-screenshot.png" alt="Which Country Quiz" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>Which Country? - Educational Quiz</h3>
                             <p class="project-date">March 2024</p>
@@ -165,7 +184,7 @@
                                 <span class="tech-tag">SQLAlchemy</span>
                                 <span class="tech-tag">REST API</span>
                             </div>
-                            <a href="http://which-country-production.up.railway.app" class="project-button" target="_blank">Try Live Demo</a>
+                            <a href="http://which-country-production.up.railway.app" class="project-button" target="_blank" rel="noopener noreferrer">Try Live Demo</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +192,7 @@
         </section>
 
         <!-- Game Development Projects -->
-        <section id="game-projects" class="game-projects">
+        <section id="game-projects" class="game-projects section">
             <div class="container">
                 <div class="section-header">
                     <div class="section-icon">🎮</div>
@@ -182,7 +201,7 @@
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
-                        <img src="hellraze.png" alt="Hellraze">
+                        <img src="hellraze.png" alt="Hellraze" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>🎮 HELLRAZE</h3>
                             <p class="project-date">Solo Unity Project - In Development (Playable Demo)</p>
@@ -198,13 +217,13 @@
                                 <span class="tech-tag">Procedural Generation</span>
                                 <span class="tech-tag">Game Design</span>
                             </div>
-                            <a href="https://pandlebury.itch.io/hellraze" class="project-button game-button" target="_blank">🎮 Play Demo</a>
-                            <a href="https://www.youtube.com/watch?v=UYMKFRnzrrQ&ab_channel=pandledev" class="project-button youtube-button" target="_blank">📺 Watch Trailer</a>
+                            <a href="https://pandlebury.itch.io/hellraze" class="project-button game-button" target="_blank" rel="noopener noreferrer">🎮 Play Demo</a>
+                            <a href="https://www.youtube.com/watch?v=UYMKFRnzrrQ&ab_channel=pandledev" class="project-button youtube-button" target="_blank" rel="noopener noreferrer">📺 Watch Trailer</a>
                         </div>
                     </div>
                     
                     <div class="project-card">
-                        <img src="neon-ascent.jpg" alt="Neon Ascent">
+                        <img src="neon-ascent.jpg" alt="Neon Ascent" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>Neon Ascent</h3>
                             <p class="project-date">April-May 2024</p>
@@ -219,14 +238,14 @@
                                 <span class="tech-tag">Pixel Art</span>
                                 <span class="tech-tag">Mobile</span>
                             </div>
-                            <a href="https://pandlebury.itch.io/neon-jump" class="project-button game-button" target="_blank">🎮 Play Game</a>
+                            <a href="https://pandlebury.itch.io/neon-jump" class="project-button game-button" target="_blank" rel="noopener noreferrer">🎮 Play Game</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="experience">
+        <section id="experience" class="experience section">
             <div class="container">
                 <h2>Experience</h2>
                 <div class="timeline">
@@ -262,7 +281,7 @@
             </div>
         </section>
 
-        <section id="contact" class="contact">
+        <section id="contact" class="contact section">
             <div class="container">
                 <h2>Contact</h2>
                 <form id="contact-form">
@@ -281,24 +300,23 @@
         </section>
     </main>
 
-    <button id="scrollToTop" title="Go to top"></button>
+    <button id="scrollToTop" title="Go to top" aria-label="Scroll to top"></button>
 
     <footer>
         <div class="footer-container">
             <p>&copy; 2024 Ömer Faruk İşeri. All rights reserved.</p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" target="_blank" class="social-icon">
-                    <img src="linkedin.png" alt="LinkedIn" class="social-image">
+                <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" target="_blank" class="social-icon" rel="noopener noreferrer" aria-label="LinkedIn">
+                    <img src="linkedin.png" alt="LinkedIn" class="social-image" loading="lazy" decoding="async">
                 </a>
-                <a href="https://github.com/iseriomer" target="_blank" class="social-icon">
-                    <img src="github-logo.png" alt="GitHub" class="social-image">
+                <a href="https://github.com/iseriomer" target="_blank" class="social-icon" rel="noopener noreferrer" aria-label="GitHub">
+                    <img src="github-logo.png" alt="GitHub" class="social-image" loading="lazy" decoding="async">
                 </a>
             </div>
         </div>
     </footer>
     
 
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
