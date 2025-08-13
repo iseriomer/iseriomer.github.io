@@ -211,6 +211,57 @@ function showToast(message) {
     setTimeout(() => { toast.remove(); }, 3000);
 }
 
+// Scroll progress bar
+function initScrollProgress() {
+  const bar = document.getElementById('scroll-progress');
+  if (!bar) return;
+  const update = () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const progress = Math.max(0, Math.min(1, scrollTop / (docHeight || 1)));
+    bar.style.width = (progress * 100).toFixed(2) + '%';
+  };
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+}
+
+// Resume popover and download
+function initResumeMenu() {
+  const trigger = document.getElementById('resume-trigger');
+  const menu = document.getElementById('resume-menu');
+  if (!trigger || !menu) return;
+
+  const toggle = (show) => {
+    const willShow = show !== undefined ? show : menu.hasAttribute('hidden');
+    if (willShow) { menu.removeAttribute('hidden'); trigger.setAttribute('aria-expanded', 'true'); }
+    else { menu.setAttribute('hidden', ''); trigger.setAttribute('aria-expanded', 'false'); }
+  };
+
+  trigger.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
+  document.addEventListener('click', (e) => {
+    if (!menu.hasAttribute('hidden')) {
+      const isInside = menu.contains(e.target) || trigger.contains(e.target);
+      if (!isInside) toggle(false);
+    }
+  });
+
+  menu.querySelectorAll('.resume-option').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const file = btn.getAttribute('data-file');
+      if (!file) return;
+      // create an invisible link to trigger download
+      const link = document.createElement('a');
+      link.href = encodeURI(file);
+      link.download = file;
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+      toggle(false);
+    });
+  });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
     initThemeSwitch();
@@ -233,3 +284,11 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+// Initialize additions after previous inits
+(function initEnhancements(){
+  document.addEventListener('DOMContentLoaded', () => {
+    initScrollProgress();
+    initResumeMenu();
+  });
+})();
