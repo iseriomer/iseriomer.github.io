@@ -20,6 +20,30 @@
         .section { opacity: 1 !important; transform: none !important; }
       </style>
     </noscript>
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Ömer Faruk İşeri | Portfolio">
+    <meta property="og:description" content="AI, Software and Game Dev projects with real impact.">
+    <meta property="og:image" content="hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ömer Faruk İşeri | Portfolio">
+    <meta name="twitter:description" content="AI, Software and Game Dev projects with real impact.">
+    <meta name="twitter:image" content="hero.jpg">
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ömer Faruk İşeri",
+      "jobTitle": "Software Developer",
+      "url": "https://github.com/iseriomer",
+      "sameAs": [
+        "https://github.com/iseriomer",
+        "https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/"
+      ],
+      "knowsAbout": ["Artificial Intelligence","RAG","LangChain","Unity","C#","Python","Docker","AWS EC2"]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="online-resume.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +61,7 @@
     </div>
     
     <header>
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
         <nav>
             <div class="container">
                 <a href="#" class="logo">Ömer Faruk İşeri</a>
@@ -45,10 +70,12 @@
                 </button>
                 <ul id="primary-navigation" class="nav-list">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#ai-projects">AI & Software</a></li>
                     <li><a href="#game-projects">Game Dev</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -57,7 +84,10 @@
             <div class="container">
                 <h2>Computer Science Student & Software Developer</h2>
                 <p>I’m a Computer Science student passionate about AI and game development. I work on language models, chatbot systems, and games.</p>
-                <a href="#ai-projects" class="cta-button">Explore My Work</a>
+                <div class="hero-ctas">
+                  <a href="#ai-projects" class="cta-button">Explore My Work</a>
+                  <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" class="cta-button secondary-cta" target="_blank" rel="noopener noreferrer">View Resume</a>
+                </div>
             </div>
         </section>
     </header>
@@ -69,6 +99,30 @@
                 <p>I am a Computer Science student at Istanbul University-Cerrahpasa (graduating June 2025) with expertise in artificial intelligence, software development, and system optimization. Through internships at GoLive and Carbon Consulting, I've developed production-ready RAG systems, optimized LLM performance, and built automated testing frameworks that significantly improved system accuracy.</p>
                 <p>My technical foundation spans machine learning implementation, cloud deployment with AWS and Docker, and CI/CD pipeline development. I have proven experience in prompt engineering, achieving accuracy improvements from 70% to 94% in enterprise applications, and building scalable document processing systems. I am fluent in Turkish and English with basic French proficiency.</p>
             </div>
+        </section>
+        
+        <section id="achievements" class="achievements section">
+          <div class="container">
+            <h2 class="section-title">Impact & Achievements</h2>
+            <div class="achievements-grid">
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="94.5" data-suffix="%">0</span></div>
+                <p>On-behalf intent detection accuracy</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="30" data-suffix="%">0</span></div>
+                <p>Latency reduction with prompt & caching optimizations</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="10" data-suffix="+">0</span></div>
+                <p>Production-grade AI & software projects</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="2" data-suffix="">0</span></div>
+                <p>Industry internships (GoLive, Carbon Consulting)</p>
+              </div>
+            </div>
+          </div>
         </section>
         
         <section id="skills" class="skills section">
@@ -281,6 +335,32 @@
             </div>
         </section>
 
+        <section id="testimonials" class="testimonials section">
+          <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial-carousel" aria-label="Testimonials">
+              <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+              <div class="testimonial-viewport">
+                <div class="testimonial-track">
+                  <div class="testimonial-card">
+                    <p class="quote">“Ömer quickly turned ambiguous requirements into a stable, scalable solution. His improvements measurably increased accuracy and user satisfaction.”</p>
+                    <p class="author">Tech Lead, Carbon Consulting</p>
+                  </div>
+                  <div class="testimonial-card">
+                    <p class="quote">“He delivered a production-ready RAG system end-to-end. Strong ownership, clean code, and thoughtful automation.”</p>
+                    <p class="author">Mentor, GoLive</p>
+                  </div>
+                  <div class="testimonial-card">
+                    <p class="quote">“Combines AI depth with practical engineering. A rare profile who can ship.”</p>
+                    <p class="author">Community Reviewer</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-btn next" aria-label="Next testimonial">›</button>
+            </div>
+          </div>
+        </section>
+
         <section id="contact" class="contact section">
             <div class="container">
                 <h2>Contact</h2>
@@ -300,6 +380,7 @@
         </section>
     </main>
 
+    <a href="#contact" class="floating-cta" aria-label="Hire Me">Hire Me</a>
     <button id="scrollToTop" title="Go to top" aria-label="Scroll to top"></button>
 
     <footer>
@@ -316,7 +397,7 @@
         </div>
     </footer>
     
-
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js" defer></script>
     <script src="script.js"></script>
 </body>
 </html>
