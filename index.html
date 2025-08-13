@@ -63,6 +63,7 @@
     <header>
         <canvas id="particle-canvas" aria-hidden="true"></canvas>
         <nav>
+            <div id="scroll-progress" aria-hidden="true"></div>
             <div class="container">
                 <a href="#" class="logo">Ömer Faruk İşeri</a>
                 <button class="hamburger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-navigation">
@@ -76,18 +77,21 @@
                     <li><a href="#ai-projects">AI & Software</a></li>
                     <li><a href="#game-projects">Game Dev</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
         <section class="hero">
-            <div class="container">
-                <h2>Computer Science Student & Software Developer</h2>
+            <div class="container hero-card">
+                <h2 class="neon-title">Computer Science Student & Software Developer</h2>
                 <p>I’m a Computer Science student passionate about AI and game development. I work on language models, chatbot systems, and games.</p>
                 <div class="hero-ctas">
                   <a href="#ai-projects" class="cta-button">Explore My Work</a>
-                  <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" class="cta-button secondary-cta" target="_blank" rel="noopener noreferrer">View Resume</a>
+                  <button id="resume-trigger" class="cta-button secondary-cta" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="resume-menu">View Resume</button>
+                  <div id="resume-menu" class="resume-menu" role="menu" aria-labelledby="resume-trigger" hidden>
+                    <button class="resume-option" data-file="Ömer Faruk İşeri CV.pdf" role="menuitem">Game CV</button>
+                    <button class="resume-option" data-file="Ömer Faruk İşeri.pdf" role="menuitem">Normal CV</button>
+                  </div>
                 </div>
             </div>
         </section>
@@ -375,32 +379,7 @@
             </div>
         </section>
 
-        <section id="testimonials" class="testimonials section">
-          <div class="container">
-            <h2 class="section-title">What People Say</h2>
-            <div class="testimonial-carousel" aria-label="Testimonials">
-              <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
-              <div class="testimonial-viewport">
-                <div class="testimonial-track">
-                  <div class="testimonial-card">
-                    <p class="quote">“Ömer quickly turned ambiguous requirements into a stable, scalable solution. His improvements measurably increased accuracy and user satisfaction.”</p>
-                    <p class="author">Tech Lead, Carbon Consulting</p>
-                  </div>
-                  <div class="testimonial-card">
-                    <p class="quote">“He delivered a production-ready RAG system end-to-end. Strong ownership, clean code, and thoughtful automation.”</p>
-                    <p class="author">Mentor, GoLive</p>
-                  </div>
-                  <div class="testimonial-card">
-                    <p class="quote">“Combines AI depth with practical engineering. A rare profile who can ship.”</p>
-                    <p class="author">Community Reviewer</p>
-                  </div>
-                </div>
-              </div>
-              <button class="carousel-btn next" aria-label="Next testimonial">›</button>
-            </div>
-          </div>
-        </section>
-
+        
         <section id="contact" class="contact section">
             <div class="container">
                 <h2>Contact</h2>
@@ -420,7 +399,6 @@
         </section>
     </main>
 
-    <a href="#contact" class="floating-cta" aria-label="Hire Me">Hire Me</a>
     <button id="scrollToTop" title="Go to top" aria-label="Scroll to top"></button>
 
     <footer>
