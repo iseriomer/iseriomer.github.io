@@ -20,6 +20,30 @@
         .section { opacity: 1 !important; transform: none !important; }
       </style>
     </noscript>
+    <!-- Open Graph / Twitter -->
+    <meta property="og:title" content="Ömer Faruk İşeri | Portfolio">
+    <meta property="og:description" content="AI, Software and Game Dev projects with real impact.">
+    <meta property="og:image" content="hero.jpg">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ömer Faruk İşeri | Portfolio">
+    <meta name="twitter:description" content="AI, Software and Game Dev projects with real impact.">
+    <meta name="twitter:image" content="hero.jpg">
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Ömer Faruk İşeri",
+      "jobTitle": "Software Developer",
+      "url": "https://github.com/iseriomer",
+      "sameAs": [
+        "https://github.com/iseriomer",
+        "https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/"
+      ],
+      "knowsAbout": ["Artificial Intelligence","RAG","LangChain","Unity","C#","Python","Docker","AWS EC2"]
+    }
+    </script>
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" href="online-resume.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,6 +61,7 @@
     </div>
     
     <header>
+        <canvas id="particle-canvas" aria-hidden="true"></canvas>
         <nav>
             <div class="container">
                 <a href="#" class="logo">Ömer Faruk İşeri</a>
@@ -45,10 +70,13 @@
                 </button>
                 <ul id="primary-navigation" class="nav-list">
                     <li><a href="#about">About</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#ai-projects">AI & Software</a></li>
                     <li><a href="#game-projects">Game Dev</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
@@ -57,7 +85,10 @@
             <div class="container">
                 <h2>Computer Science Student & Software Developer</h2>
                 <p>I’m a Computer Science student passionate about AI and game development. I work on language models, chatbot systems, and games.</p>
-                <a href="#ai-projects" class="cta-button">Explore My Work</a>
+                <div class="hero-ctas">
+                  <a href="#ai-projects" class="cta-button">Explore My Work</a>
+                  <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" class="cta-button secondary-cta" target="_blank" rel="noopener noreferrer">View Resume</a>
+                </div>
             </div>
         </section>
     </header>
@@ -66,9 +97,48 @@
         <section id="about" class="about section">
             <div class="container">
                 <h2 class="section-title">About Me</h2>
-                <p>I am a Computer Science student at Istanbul University-Cerrahpasa (graduating June 2025) with expertise in artificial intelligence, software development, and system optimization. Through internships at GoLive and Carbon Consulting, I've developed production-ready RAG systems, optimized LLM performance, and built automated testing frameworks that significantly improved system accuracy.</p>
-                <p>My technical foundation spans machine learning implementation, cloud deployment with AWS and Docker, and CI/CD pipeline development. I have proven experience in prompt engineering, achieving accuracy improvements from 70% to 94% in enterprise applications, and building scalable document processing systems. I am fluent in Turkish and English with basic French proficiency.</p>
+                <p>I am a Computer Science student at Istanbul University-Cerrahpasa (graduating September 2025) with expertise in artificial intelligence, software development, and game development. Through internships at GoLive and Carbon Consulting, I've developed production-ready RAG systems, optimized LLM performance, and built automated testing frameworks that significantly improved system accuracy.</p>
+                <p>My technical foundation spans machine learning implementation, cloud deployment with AWS and Docker, game systems design in Unity, and CI/CD pipeline development. I am fluent in Turkish (Native), English (Advanced) with basic French proficiency.</p>
             </div>
+        </section>
+        
+        <section id="education" class="experience section">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h3>Istanbul University - Cerrahpasa | Computer Science</h3>
+                        <p><strong>İstanbul, Turkey</strong> | 2020 - Expected September 2025</p>
+                        <ul>
+                            <li>Core CS curriculum with strong focus on software engineering and AI.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="achievements" class="achievements section">
+          <div class="container">
+            <h2 class="section-title">Impact & Achievements</h2>
+            <div class="achievements-grid">
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="94.5" data-suffix="%">0</span></div>
+                <p>On-behalf intent detection accuracy</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="1" data-suffix="">0</span></div>
+                <p>Award won: Best Technical Implementation (IUC CE 2025)</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="10" data-suffix="+">0</span></div>
+                <p>Production-grade AI & software projects</p>
+              </div>
+              <div class="achievement-card">
+                <div class="counter"><span class="counter-value" data-target="2" data-suffix="">0</span></div>
+                <p>Industry internships (GoLive, Carbon Consulting)</p>
+              </div>
+            </div>
+          </div>
         </section>
         
         <section id="skills" class="skills section">
@@ -76,43 +146,44 @@
                 <h2 class="section-title">Technical Expertise</h2>
                 <div class="skills-grid">
                     <div class="skill-category">
+                        <h3>Programming Languages</h3>
+                        <ul class="skill-list">
+                            <li>Python, C#, Java, C++, SQL</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
                         <h3>AI & Machine Learning</h3>
                         <ul class="skill-list">
                             <li>Large Language Models (GPT, LLaMA)</li>
                             <li>Retrieval Augmented Generation (RAG)</li>
-                            <li>LLM Prompt Engineering & Optimization</li>
                             <li>Vector Databases (FAISS, Chroma)</li>
-                            <li>Intent Detection Systems</li>
+                            <li>Prompt Engineering & Optimization</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>Backend Development</h3>
+                        <h3>Game Engines & Tools</h3>
                         <ul class="skill-list">
-                            <li>Python (LangChain, Chainlit)</li>
-                            <li>Database Systems (SQL, Redis)</li>
-                            <li>API Integration & Testing</li>
-                            <li>Automated Testing (Selenium)</li>
-                            <li>Microsoft Teams API</li>
+                            <li>Unity 3D/2D (Advanced), Unreal Engine 4/5 (Beginner)</li>
+                            <li>Plastic SCM</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3>Game Development</h3>
                         <ul class="skill-list">
-                            <li>Unity 2D/3D</li>
-                            <li>Game Design</li>
-                            <li>C# Programming</li>
-                            <li>UI/UX for Games</li>
-                            <li>Cross-platform Development</li>
+                            <li>Weapon Systems, Enemy AI, Player Progression</li>
+                            <li>Perk & Ability Systems, Game Economy Balancing</li>
+                            <li>Level Design, Performance Optimization</li>
+                            <li>UI/UX for Games, Cross-platform Development</li>
+                            <li>OOP, Design Patterns (Factory, Singleton, Observer), Scriptable Objects</li>
                         </ul>
                     </div>
                     <div class="skill-category">
-                        <h3>DevOps & Tools</h3>
+                        <h3>Backend & DevOps</h3>
                         <ul class="skill-list">
-                            <li>Docker & AWS EC2</li>
-                            <li>CI/CD (GitHub Actions)</li>
-                            <li>Git (GitHub, GitLab)</li>
+                            <li>Docker, AWS EC2, GitHub Actions (CI/CD)</li>
+                            <li>APIs, Redis, SQL Databases</li>
+                            <li>Testing & Automation (Selenium, Postman)</li>
                             <li>Linux & Bash Scripting</li>
-                            <li>API Testing (Postman)</li>
                         </ul>
                     </div>
                 </div>
@@ -125,18 +196,18 @@
                 <div class="section-header">
                     <div class="section-icon">🤖</div>
                     <h2 class="section-title">AI, NLP & Software Engineering</h2>
-                    <p class="section-description">Developing production-ready AI systems with focus on document processing, conversational AI, and intelligent automation. These projects demonstrate full-stack development capabilities and real-world problem solving:</p>
+                    <p class="section-description">Developing production-ready AI systems with focus on document processing, conversational AI, and intelligent automation.</p>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
                         <img src="rag-project.png" alt="RAG Project With Gradio" loading="lazy" decoding="async">
                         <div class="project-info">
-                            <h3>RAG Project With Gradio</h3>
+                            <h3>Advanced Document Processing & Retrieval</h3>
                             <p class="project-date">August-September 2024</p>
                             <ul>
-                                <li>Developed a RAG application using Python, Gradio, LangChain, OpenAI's GPT models, FAISS, and PyMuPDF.</li>
-                                <li>Implemented a Gradio-based UI for document uploading and NLP model customization.</li>
-                                <li>Optimized document handling with caching and deployed the app for interactive exploration.</li>
+                                <li>Built RAG solutions using Python, LangChain and OpenAI GPT models.</li>
+                                <li>Gradio UI with customizable NLP settings and FAISS-based vector search.</li>
+                                <li>Optimized multi-format document handling (PDF, DOCX, TXT) with robust chunking and caching.</li>
                             </ul>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
@@ -151,16 +222,17 @@
                     <div class="project-card">
                         <img src="chatbot-project.png" alt="Intelligent Document Processing Chatbot" loading="lazy" decoding="async">
                         <div class="project-info">
-                            <h3>Intelligent Document Processing Chatbot</h3>
+                            <h3>Document QA Chatbot with Source Attribution</h3>
                             <p class="project-date">August-September 2024</p>
                             <ul>
-                                <li>Developed a document processing chatbot with Python, LangChain, Chainlit, and OpenAI's GPT models.</li>
-                                <li>Implemented custom text extraction and context-aware question-answering.</li>
-                                <li>Deployed on AWS EC2 with Docker and set up CI/CD pipelines using GitHub Actions.</li>
+                                <li>Chainlit chatbot with document-specific source referencing using Chroma vector storage.</li>
+                                <li>Context-aware QA with optimized prompting; deployed on AWS EC2 with Docker.</li>
+                                <li>End-to-end CI/CD using GitHub Actions for automated testing and deployment.</li>
                             </ul>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">Chainlit</span>
+                                <span class="tech-tag">Chroma</span>
                                 <span class="tech-tag">AWS EC2</span>
                                 <span class="tech-tag">Docker</span>
                             </div>
@@ -174,9 +246,9 @@
                             <h3>Which Country? - Educational Quiz</h3>
                             <p class="project-date">March 2024</p>
                             <ul>
-                                <li>Developed an educational web-based quiz comparing country statistics using Python/Flask and REST Countries API.</li>
-                                <li>Implemented responsive frontend with interactive flag displays and animated transitions.</li>
-                                <li>Integrated SQLAlchemy for data persistence and leaderboard functionality.</li>
+                                <li>Web-based educational quiz using REST Countries API.</li>
+                                <li>Responsive UI with interactive flag displays and transitions.</li>
+                                <li>Leaderboards and persistence with SQLAlchemy.</li>
                             </ul>
                             <div class="project-tech">
                                 <span class="tech-tag">Python</span>
@@ -197,19 +269,22 @@
                 <div class="section-header">
                     <div class="section-icon">🎮</div>
                     <h2 class="section-title">Game Development & Design</h2>
-                    <p class="section-description">Creating interactive experiences through game development, focusing on procedural systems and engaging gameplay mechanics. Below are my personal game projects built from the ground up:</p>
+                    <p class="section-description">Procedural systems, engaging mechanics, and scalable architecture.</p>
                 </div>
                 <div class="projects-grid">
                     <div class="project-card">
                         <img src="hellraze.png" alt="Hellraze" loading="lazy" decoding="async">
                         <div class="project-info">
-                            <h3>🎮 HELLRAZE</h3>
-                            <p class="project-date">Solo Unity Project - In Development (Playable Demo)</p>
+                            <h3>🎮 HELLRAZE – Roguelike FPS</h3>
+                            <p class="project-date">Released • Actively Maintained</p>
                             <ul>
-                                <li>Developing a roguelike FPS featuring advanced procedural level generation and dynamic combat systems in Unity 3D.</li>
-                                <li>Implemented comprehensive weapon systems (revolvers, shotguns, flamethrowers) with balanced gameplay mechanics and player progression.</li>
-                                <li>Designed modular architecture supporting scalable content generation and performance optimization for smooth gameplay experience.</li>
-                                <li>Created engaging boss encounter systems using state machines and AI programming with regular community feedback integration.</li>
+                                <li>Awarded "Best Technical Implementation" at 2025 Game Development Project Days (IUC CE).</li>
+                                <li>Replayable, procedurally generated FPS inspired by boomer shooter genre (Unity 3D).</li>
+                                <li>Procedural dungeon generation with varied room layouts and enemy placements.</li>
+                                <li>Multiple weapon systems (revolver, shotgun, machine gun, flamethrower, melee, plasma gun, grappling hook).</li>
+                                <li>Meta-progression and in-game upgrade economy; advanced perk and ability systems.</li>
+                                <li>Boss fights using state machines and performance-optimized enemy AI.</li>
+                                <li>Regular development updates and gameplay videos on YouTube.</li>
                             </ul>
                             <div class="project-tech">
                                 <span class="tech-tag">Unity 3D</span>
@@ -223,14 +298,33 @@
                     </div>
                     
                     <div class="project-card">
+                        <div class="project-cover placeholder" aria-hidden="true"></div>
+                        <div class="project-info">
+                            <h3>Educational Game for Children with Special Needs</h3>
+                            <p class="project-date">Released Project</p>
+                            <ul>
+                                <li>Four core game types (matching, object selection, sequencing daily routines) with three difficulty levels and nine categories.</li>
+                                <li>ScriptableObject-based modular data system for scalable content; optimized assets, color configs, audio layers and animations.</li>
+                                <li>Real-time analytics and teacher dashboard for performance tracking with JSON-based persistent storage.</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span class="tech-tag">Unity 2D</span>
+                                <span class="tech-tag">C#</span>
+                                <span class="tech-tag">ScriptableObject</span>
+                                <span class="tech-tag">Analytics</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
                         <img src="neon-ascent.jpg" alt="Neon Ascent" loading="lazy" decoding="async">
                         <div class="project-info">
                             <h3>Neon Ascent</h3>
                             <p class="project-date">April-May 2024</p>
                             <ul>
-                                <li>Created a 2D platformer game with pixel art aesthetics and high-score challenge mechanics.</li>
-                                <li>Released on both HTML5 and Android platforms with optimized performance.</li>
-                                <li>Implemented player feedback system to refine game mechanics and user experience.</li>
+                                <li>2D platformer with pixel art aesthetics and high-score mechanics.</li>
+                                <li>Released on HTML5 and Android with performance optimizations.</li>
+                                <li>Iterated via player feedback to refine core mechanics.</li>
                             </ul>
                             <div class="project-tech">
                                 <span class="tech-tag">Unity 2D</span>
@@ -253,21 +347,20 @@
                         <h3>Carbon Consulting - Intern (Part-time)</h3>
                         <p><strong>İstanbul, Turkey</strong> | December 2024 - March 2025</p>
                         <ul>
-                            <li>Worked on an SAP-integrated HR chatbot for Microsoft Teams, developing automated test systems using Selenium.</li>
-                            <li>Engineered prompt optimization solutions for LLM-based systems, improving on-behalf detection accuracy from 70.3% to 94.5%.</li>
-                            <li>Created context-aware datetime extraction prompts that dynamically incorporated relative time references, increasing accuracy from 44% to 70% with LLaMA models.</li>
-                            <li>Implemented a multi-stage intent detection system to enhance user experience by accurately identifying user intentions in ambiguous scenarios.</li>
-                            <li>Performed comprehensive manual testing, documenting issues in GitLab and collaborating with cross-functional teams to ensure SAP integration functionality.</li>
-                            <li>Utilized technologies including Python, Selenium, Microsoft Teams API, Docker, Redis, Postman, and various LLM API integrations.</li>
+                            <li>Worked on an SAP-integrated HR chatbot for Microsoft Teams; collaborated across teams to ensure SAP integration functionality.</li>
+                            <li>Developed automated test system with Selenium, implementing robust scenarios and error handling.</li>
+                            <li>Engineered prompt optimizations, improving on-behalf detection accuracy from 70.3% to 94.5%.</li>
+                            <li>Created context-aware datetime extraction prompts with relative time references, increasing accuracy from 44% to 70% on LLaMA.</li>
+                            <li>Built a multi-stage intent detection system for disambiguation and UX improvements.</li>
+                            <li>Documented issues in GitLab; stack: Python, Selenium, Microsoft Teams API, Docker, Redis, Postman, various LLM APIs.</li>
                         </ul>
                     </div>
                     <div class="timeline-item">
                         <h3>GoLive - Intern (Full-time)</h3>
                         <p><strong>İstanbul, Turkey</strong> | August-September 2024</p>
                         <ul>
-                            <li>Developed a RAG project using Python with LangChain, Chainlit, OpenAI API, and PyMuPDF libraries.</li>
-                            <li>Deployed the project on AWS EC2 using Docker.</li>
-                            <li>Implemented CI/CD pipelines with GitHub Actions for automated testing and deployment.</li>
+                            <li>Developed RAG solutions using Python, LangChain, Chainlit, OpenAI API, PyMuPDF.</li>
+                            <li>Deployed on AWS EC2 using Docker; implemented CI/CD with GitHub Actions.</li>
                         </ul>
                     </div>
                     <div class="timeline-item">
@@ -275,10 +368,37 @@
                         <p><strong>İstanbul, Turkey</strong> | September 2022 - January 2023</p>
                         <ul>
                             <li>Contributed to organizing events and workshops aimed at enhancing members' skills in computer science.</li>
+                            <li>Participated in game development workshops.</li>
                         </ul>
                     </div>
                 </div>
             </div>
+        </section>
+
+        <section id="testimonials" class="testimonials section">
+          <div class="container">
+            <h2 class="section-title">What People Say</h2>
+            <div class="testimonial-carousel" aria-label="Testimonials">
+              <button class="carousel-btn prev" aria-label="Previous testimonial">‹</button>
+              <div class="testimonial-viewport">
+                <div class="testimonial-track">
+                  <div class="testimonial-card">
+                    <p class="quote">“Ömer quickly turned ambiguous requirements into a stable, scalable solution. His improvements measurably increased accuracy and user satisfaction.”</p>
+                    <p class="author">Tech Lead, Carbon Consulting</p>
+                  </div>
+                  <div class="testimonial-card">
+                    <p class="quote">“He delivered a production-ready RAG system end-to-end. Strong ownership, clean code, and thoughtful automation.”</p>
+                    <p class="author">Mentor, GoLive</p>
+                  </div>
+                  <div class="testimonial-card">
+                    <p class="quote">“Combines AI depth with practical engineering. A rare profile who can ship.”</p>
+                    <p class="author">Community Reviewer</p>
+                  </div>
+                </div>
+              </div>
+              <button class="carousel-btn next" aria-label="Next testimonial">›</button>
+            </div>
+          </div>
         </section>
 
         <section id="contact" class="contact section">
@@ -300,6 +420,7 @@
         </section>
     </main>
 
+    <a href="#contact" class="floating-cta" aria-label="Hire Me">Hire Me</a>
     <button id="scrollToTop" title="Go to top" aria-label="Scroll to top"></button>
 
     <footer>
@@ -316,7 +437,7 @@
         </div>
     </footer>
     
-
+    <script src="https://unpkg.com/three@0.152.2/build/three.min.js" defer></script>
     <script src="script.js"></script>
 </body>
 </html>
