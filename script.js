@@ -170,20 +170,7 @@ function initCounters() {
   counters.forEach(c => io.observe(c));
 }
 
-// Testimonials carousel
-function initTestimonialsCarousel() {
-  const track = document.querySelector('.testimonial-track');
-  const prev = document.querySelector('.carousel-btn.prev');
-  const next = document.querySelector('.carousel-btn.next');
-  if (!track || !prev || !next) return;
-  const slides = Array.from(track.children);
-  let index = 0;
-  function update() { track.style.transform = `translateX(-${index * 100}%)`; }
-  prev.addEventListener('click', () => { index = (index - 1 + slides.length) % slides.length; update(); });
-  next.addEventListener('click', () => { index = (index + 1) % slides.length; update(); });
-  // Auto-rotate
-  setInterval(() => { index = (index + 1) % slides.length; update(); }, 6000);
-}
+
 
 // Form Submission
 function handleFormSubmit() {
@@ -193,7 +180,13 @@ function handleFormSubmit() {
             e.preventDefault();
             const formData = new FormData(form);
             try {
-                const response = await fetch('your-endpoint', { method: 'POST', body: formData });
+                const response = await fetch('https://formspree.io/f/xwpqyaoo', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+                });                
                 if(response.ok) { form.reset(); showToast('Message sent successfully!'); }
                 else { showToast('Error sending message. Please try again.'); }
             } catch (error) { showToast('Error sending message. Please try again.'); }
