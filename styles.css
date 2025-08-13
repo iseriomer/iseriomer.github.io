@@ -65,6 +65,14 @@ p {
     color: var(--text-secondary);
     transition: color 0.3s ease;
 }
+/* Visually hidden (for accessible labels) */
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
 /* Theme Toggle Switch */
 .theme-switch-wrapper {
     position: fixed;
@@ -163,7 +171,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('hero-bg.jpg') no-repeat center center/cover;
+    background: url('hero.jpg') no-repeat center center/cover;
     opacity: var(--overlay-opacity);
     z-index: 0;
 }
@@ -240,7 +248,8 @@ nav.sticky {
     border-radius: 3px;
   }
   
-  nav ul li a:hover::after {
+  nav ul li a:hover::after,
+  nav ul li a.active::after {
     width: 100%;
   }
   
@@ -917,20 +926,62 @@ nav.sticky {
     transform: rotate(45deg);
     margin-top: 5px;
   }
-  
+
   /* Animation Keyframes */
   @keyframes fadeInUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
   }
   
-  /* Media Queries */
+  /* Sections: anchor offset and reveal animation */
+  section {
+    scroll-margin-top: 100px;
+  }
+  .section {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .section.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Toast notification */
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--card-bg);
+    color: var(--text-primary);
+    border: 1px solid var(--card-border);
+    box-shadow: var(--card-shadow);
+    padding: 12px 16px;
+    border-radius: 10px;
+    z-index: 1100;
+  }
+
+  /* Mobile Navigation */
+  .hamburger {
+    display: none;
+    width: 40px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background: #fff;
+    transition: var(--transition-standard);
+  }
+
   @media (max-width: 1024px) {
     .hero h2 {
       font-size: 3.2rem;
@@ -959,15 +1010,45 @@ nav.sticky {
       height: 100vh;
     }
     
+    .hamburger {
+      display: inline-flex;
+    }
+    
     nav .container {
+      flex-direction: row;
+      gap: 16px;
+    }
+    
+    .nav-list {
+      position: absolute;
+      top: 64px;
+      right: 20px;
+      left: 20px;
+      display: none;
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.95);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 12px 16px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    }
+    [data-theme="dark"] .nav-list {
+      background: rgba(15, 23, 42, 0.95);
+    }
+    .nav-list.active {
+      display: flex;
     }
     
     nav ul {
       flex-direction: column;
       gap: 10px;
-      align-items: center;
+      align-items: flex-start;
+    }
+    
+    nav ul li a {
+      color: var(--text-primary);
     }
     
     .hero h2 {
@@ -1030,5 +1111,14 @@ nav.sticky {
     .social-icon {
       width: 40px;
       height: 40px;
+    }
+  }
+
+  /* Reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation: none !important;
+      transition: none !important;
+      scroll-behavior: auto !important;
     }
   }
