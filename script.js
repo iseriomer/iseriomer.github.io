@@ -226,38 +226,18 @@ function initScrollProgress() {
   update();
 }
 
-// Resume popover and download
-function initResumeMenu() {
-  const trigger = document.getElementById('resume-trigger');
-  const menu = document.getElementById('resume-menu');
-  if (!trigger || !menu) return;
-
-  const toggle = (show) => {
-    const willShow = show !== undefined ? show : menu.hasAttribute('hidden');
-    if (willShow) { menu.removeAttribute('hidden'); trigger.setAttribute('aria-expanded', 'true'); }
-    else { menu.setAttribute('hidden', ''); trigger.setAttribute('aria-expanded', 'false'); }
-  };
-
-  trigger.addEventListener('click', (e) => { e.stopPropagation(); toggle(); });
-  document.addEventListener('click', (e) => {
-    if (!menu.hasAttribute('hidden')) {
-      const isInside = menu.contains(e.target) || trigger.contains(e.target);
-      if (!isInside) toggle(false);
-    }
-  });
-
-  menu.querySelectorAll('.resume-option').forEach(btn => {
+// Resume downloads
+function initResumeDownloads() {
+  document.querySelectorAll('.download-cta').forEach(btn => {
     btn.addEventListener('click', () => {
       const file = btn.getAttribute('data-file');
       if (!file) return;
-      // create an invisible link to trigger download
       const link = document.createElement('a');
       link.href = encodeURI(file);
       link.download = file;
       document.body.appendChild(link);
       link.click();
       link.remove();
-      toggle(false);
     });
   });
 }
@@ -289,6 +269,6 @@ document.addEventListener('DOMContentLoaded', () => {
 (function initEnhancements(){
   document.addEventListener('DOMContentLoaded', () => {
     initScrollProgress();
-    initResumeMenu();
+    initResumeDownloads();
   });
 })();
