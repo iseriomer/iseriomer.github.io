@@ -316,3 +316,12 @@ nav.sticky .logo, nav.sticky ul li a { color: var(--text-primary); }
   background: linear-gradient(135deg, rgba(37,99,235,0.15), rgba(16,185,129,0.15));
   display: block;
 }
+
+/* Download CV group */
+.download-group { display: flex; gap: 10px; flex-wrap: wrap; }
+.download-cta { background: linear-gradient(135deg, rgba(16,185,129,0.9), rgba(5,150,105,0.9)); box-shadow: 0 10px 25px rgba(16,185,129,0.35); }
+.download-cta::before { background: rgba(4,120,87,0.6); }
+@media (max-width: 480px) {
+  .download-group { width: 100%; }
+  .download-group .cta-button { flex: 1 1 auto; justify-content: center; }
+}
