@@ -1,400 +1,348 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ömer Faruk İşeri - Award-winning Unity Game Developer crafting next-gen gaming experiences">
-    <title>Ömer Faruk İşeri | Unity Game Developer</title>
+    <title>Ömer Faruk İşeri | Systems Engineer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- Animated Background -->
-    <div class="bg-animation">
-        <div class="bg-grid"></div>
-        <div class="floating-particles">
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-            <div class="particle"></div>
-        </div>
-    </div>
 
-    <!-- Navigation -->
-    <nav id="nav">
-        <div class="container">
-            <a href="#" class="logo">ÖFİ</a>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#games">Games</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <button class="hamburger" id="hamburger" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
+    <div class="container">
 
-    <!-- Hero Section -->
-    <header>
-        <div class="hero-glow"></div>
-        <div class="container">
-            <div class="hero-content fade-in">
-                <div class="hero-badge">
-                    Unity Developer
-                </div>
-                <h1 class="glow-text" style="padding-top: 15px;margin-top: 11px;margin-bottom: 27px;padding-bottom: 15px;">Ömer Faruk İşeri</h1>
-                <p class="hero-subtitle">
-                    I focus on making games I can enjoy repeatedly, with high replayability and a different feeling every single time. Explore my projects below.
+        <!-- Header -->
+        <header class="site-header">
+            <div>
+                <h1>Ömer Faruk İşeri</h1>
+                <p class="intro-text">
+                    Game Developer & Systems Engineer. Focus on <strong>scalable gameplay systems</strong>,
+                    <strong>performance optimization</strong>, and <strong>procedural generation</strong>.
                 </p>
-                <div class="cta-group">
-                    <a href="#games" class="btn btn-primary">Explore Game Portfolio</a>
-                    <a href="Ömer Faruk İşeri.pdf" class="btn btn-secondary" download>Download CV 📄</a>
+                <div style="margin-top: 1rem; color: var(--text-secondary);">
+                    <span style="display: block;">Istanbul, Turkey</span>
+                    <span style="display: block;">omerfarukiseri21@gmail.com</span>
+                </div>
+            </div>
+            <nav class="social-nav">
+                <a href="https://github.com/iseriomer" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/iseriomer" target="_blank">LinkedIn</a>
+                <a href="https://iseriomer.itch.io" target="_blank">Itch.io</a>
+                <a href="Ömer Faruk İşeri.pdf" target="_blank">Resume [PDF]</a>
+            </nav>
+        </header>
 
+        <!-- Projects -->
+        <main class="section">
+            <h2>Select Works</h2>
+
+            <!-- Hellraze Case Study -->
+            <article class="project">
+                <div class="project-header">
+                    <h3>HELLRAZE</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Procedural Gen</span>
+                        <span class="tech-tag">FSM</span>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/UYMKFRnzrrQ" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>A fast-paced roguelike FPS featuring procedural level generation and varied dungeon layouts.
+                            Awarded <strong>"Best Technical Implementation"</strong> at the 2025 Game Development
+                            Project Days.</p>
+                        <p>Designed to support high-octane combat loops with advanced enemy AI and complex weapon
+                            systems.</p>
+
+                        <div class="project-links">
+                            <a href="https://iseriomer.itch.io/hellraze" target="_blank" class="btn-link">Play on
+                                Itch.io</a>
+                            <a href="https://github.com/iseriomer" target="_blank" class="btn-link">Source Code</a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h4>System Architecture</h4>
+                        <ul>
+                            <li><strong>Custom Occlusion Culling:</strong> Optimized performance for procedurally
+                                generated rooms by implementing a custom culling system in Unity.</li>
+                            <li><strong>State Machine AI:</strong> Engineered complex enemy behaviors including
+                                pathfinding, threat assessment, and varied attack patterns using hierarchal state
+                                machines.</li>
+                            <li><strong>Weapon Systems:</strong> Implemented 7 unique weapon mechanics (grappling hook,
+                                flamethrower) with distinct state logic.</li>
+                            <li><strong>Meta-Progression:</strong> Designed a scalable persistent upgrade economy.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-grid">
+                    <img src="hellraze.png" alt="Hellraze Gameplay 1">
+                    <img src="hellraze1.png" alt="Hellraze Gameplay 2">
+                    <img src="hellraze2.png" alt="Hellraze Gameplay 3">
+                </div>
+            </article>
+
+            <!-- Neon Blast Case Study -->
+            <article class="project">
+                <div class="project-header">
+                    <h3>Neon Blast</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Vanilla JS</span>
+                        <span class="tech-tag">HTML5 Canvas</span>
+                        <span class="tech-tag">No Engines</span>
+                        <span class="tech-tag">Optimization</span>
+                    </div>
+                </div>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/XwwKz0TTTT4" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>An arcade roguelike shooter built on a <strong>high-performance custom 2D rendering
+                                engine</strong> written in Vanilla JavaScript (<3MB). Supports 200+ active entities at a
+                                stable 60 FPS on mobile devices.</p>
+
+                                <div class="project-links">
+                                    <a href="https://play.google.com/store/apps/details?id=com.pandlebury.neonblast"
+                                        target="_blank" class="btn-link">Google Play</a>
+                                    <a href="https://pandlebury.itch.io/neon-blast" target="_blank"
+                                        class="btn-link">Play on Web</a>
+                                </div>
+                    </div>
+                    <div class="project-details">
+                        <h4>Technical Details</h4>
+                        <ul>
+                            <li><strong>Custom Engine:</strong> Built a memory-efficient game loop and rendering
+                                pipeline from scratch without external frameworks.</li>
+                            <li><strong>Spatial Partitioning:</strong> Optimized collision detection using Grid-Based
+                                systems, reducing complexity from O(N²) to O(N).</li>
+                            <li><strong>Object Pooling:</strong> Managed 200+ entities and 500+ projectiles with zero
+                                garbage collection spikes.</li>
+                            <li><strong>Dynamic Scaling:</strong> Implemented an algorithmic difficulty scaler adjusting
+                                spawn rates and enemy weights in real-time.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-grid">
+                    <img src="neon-blast-ss.jpeg" alt="Neon Blast Gameplay">
+                    <img src="neon-blast-ss1.jpeg" alt="Neon Blast Gameplay">
+                    <img src="neon-blast-ss2.jpeg" alt="Neon Blast Gameplay">
+                    <!-- Placeholder for screenshots of Neon Blast if available -->
+                </div>
+            </article>
+
+            <!-- Tile Tactics Case Study -->
+            <article class="project">
+                <div class="project-header">
+                    <h3>Tile Tactics</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Design Patterns</span>
+                        <span class="tech-tag">Mobile</span>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/sdUEzP8cIRg" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>A unique hybrid puzzle game blending 2048 mechanics with roguelike card usage. Acquired 180+
+                            active users with a 4.5/5 stars rating.</p>
+
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.tile.tactics" target="_blank"
+                                class="btn-link">Google Play</a>
+                            <a href="https://iseriomer.itch.io/tile-tactics" target="_blank" class="btn-link">Play on
+                                Itch.io</a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <h4>System Design</h4>
+                        <ul>
+                            <li><strong>Architecture:</strong> Heavily utilized <strong>Manager, State, and Observer
+                                    patterns</strong> for a decoupled, event-driven codebase.</li>
+                            <li><strong>ScriptableObjects:</strong> Managed all game data (27 cards, 14 perks) for rapid
+                                iteration and balancing.</li>
+                            <li><strong>Strategy Pattern:</strong> Implemented weighted random card distribution
+                                adapting to game phases (Early/Mid/Late).</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-grid">
+                    <img src="tile-tactics.png" alt="Tile Tactics Gameplay">
+                    <img src="tile-tactics1.png" alt="Tile Tactics Gameplay 2">
+                </div>
+            </article>
+
+            <!-- Educational Game -->
+            <article class="project">
+                <div class="project-header">
+                    <h3>Educational Game (Special Needs)</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity 2D</span>
+                        <span class="tech-tag">Accessibility</span>
+                        <span class="tech-tag">Analytics</span>
+                    </div>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>Developed core gameplay modes (matching, sequencing) for children with special needs. Focus
+                            on accessibility and teacher analytics.</p>
+                        <div class="project-links">
+                            <a href="https://pandlebury.itch.io/egitimuygulamasi" target="_blank" class="btn-link">Play
+                                on Itch.io</a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li><strong>Modular Content:</strong> Engineered a ScriptableObject-based system for
+                                scalable content creation across 9 thematic categories.</li>
+                            <li><strong>Analytics Dashboard:</strong> Built a teacher dashboard to track progress and
+                                generate visual behavior reports using persistent JSON data.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-grid">
+                    <img src="egitim-uygulamasi.png" alt="Educational Game Gameplay">
+                </div>
+            </article>
+
+        </main>
+
+        <!-- Experience -->
+        <section class="section">
+            <h2>Experience</h2>
+            <div class="timeline-list">
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Nov 2025 — Present</div>
+                    <div class="timeline-info">
+                        <div class="timeline-company">Sollen Technologies</div>
+                        <h3>Fullstack Developer</h3>
+                        <p>Developing a B2B OHS platform using <strong>Python (FastAPI)</strong>,
+                            <strong>React</strong>, and <strong>Flutter</strong>. Focus on scalable backend architecture
+                            and real-time reporting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Dec 2024 — Mar 2025</div>
+                    <div class="timeline-info">
+                        <div class="timeline-company">Carbon Consulting</div>
+                        <h3>Intern (LLM & Automation)</h3>
+                        <p>Developed an SAP-integrated HR chatbot. Optimized LLM prompts (70.3% → 94.5% accuracy) and
+                            implemented Selenium automation.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-entry">
+                    <div class="timeline-date">Aug 2024 — Sep 2024</div>
+                    <div class="timeline-info">
+                        <div class="timeline-company">GoLive</div>
+                        <h3>Intern (RAG System)</h3>
+                        <p>Managed lifecycle of a RAG system. Implemented CI/CD pipelines and deployed on AWS
+                            EC2/Docker.</p>
+                    </div>
                 </div>
 
             </div>
-        </div>
-    </header>
+        </section>
 
-    <!-- Games Section -->
-    <section id="games">
-        <div class="container">
-            <div class="section-header">
-                <!-- <div class="section-badge">⚡ FEATURED PROJECTS</div> -->
-                <h2>Game Portfolio</h2>
-            </div>
-
-            <div class="games-grid">
-                <!-- HELLRAZE -->
-                <div class="game-card" 
-                     data-image="hellraze.png"
-                     data-title="HELLRAZE"
-                     data-meta="Roguelike FPS • Itch.io"
-                     data-award="🏆 Best Tech"
-                     data-description="Adrenaline-pumping boomer shooter featuring procedurally generated dungeons, diverse weapon arsenal, and deep meta-progression. Recognized at 2025 IUC Game Dev Project Days."
-                     data-features='["Advanced procedural dungeon generation with dynamic layouts","7 unique weapons including grappling hook mechanics","Sophisticated AI boss fights with state machine architecture","Comprehensive meta-progression & economy balancing"]'
-                     data-tech='["Unity 3D","C#","Procedural Gen","AI Systems","Boss Design"]'
-                     data-links='[{"text":"Play Demo","url":"https://pandlebury.itch.io/hellraze","type":"primary"},{"text":"📺 Trailer","url":"https://www.youtube.com/watch?v=UYMKFRnzrrQ","type":"secondary"}]'
-                     data-gallery='["hellraze.png","hellraze1.png","hellraze2.png"]'>
-                    <div class="game-image-wrapper">
-                        <img src="hellraze.png" alt="HELLRAZE - Roguelike FPS Game" class="game-image" onerror="this.style.background='linear-gradient(135deg, #667eea, #764ba2)'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'260\'%3E%3Crect width=\'400\' height=\'260\' fill=\'%23667eea\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'32\' font-weight=\'bold\' fill=\'white\'%3EHELLRAZE%3C/text%3E%3C/svg%3E'">
-                        <div class="game-overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <div class="game-content">
-                        <div class="game-header">
-                            <div>
-                                <h3 class="game-title">HELLRAZE</h3>
-                                <div class="game-meta">Roguelike FPS • Itch.io</div>
-                            </div>
-                            <div class="award-badge">🏆 Best Tech Award</div>
-                        </div>
-                        <div class="game-card-buttons">
-                            <a href="https://pandlebury.itch.io/hellraze" class="btn btn-primary game-card-btn" target="_blank" onclick="event.stopPropagation()">Play</a>
-                            <a href="https://www.youtube.com/watch?v=UYMKFRnzrrQ" class="btn btn-secondary game-card-btn" target="_blank" onclick="event.stopPropagation()">📺 Trailer</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tile Tactics -->
-                <div class="game-card"
-                     data-image="tile-tactics.png"
-                     data-title="Tile Tactics: 2048 Card Puzzle"
-                     data-meta="Mobile Puzzle • Google Play"
-                     data-description="Innovative hybrid puzzle combining classic 2048 mechanics with strategic roguelike card system. Features intelligent mana economy, 27 unique cards, and 14 stackable perks."
-                     data-features='["Modular architecture using Manager, State & Observer patterns","Weighted random distribution with adaptive phase balancing","Dynamic multiplier chain system for scoring depth","Unity Ads monetization with rewarded mechanics"]'
-                     data-tech='["Unity 2D","C#","Mobile Dev","Game Economy","Ads Integration"]'
-                     data-links='[{"text":"📱 Google Play","url":"https://play.google.com/store/apps/details?id=com.pandlebury.numbergametest","type":"primary"},{"text":"Play on Itch.io","url":"https://pandlebury.itch.io/tiletactics","type":"secondary"},{"text":"📺 Trailer","url":"https://youtu.be/sdUEzP8cIRg","type":"secondary"}]'
-                     data-gallery='["tile-tactics.png","tile-tactics1.png","tile-tactics2.png"]'>
-                    <div class="game-image-wrapper">
-                        <img src="tile-tactics.png" alt="Tile Tactics: 2048 Card Puzzle" class="game-image" onerror="this.style.background='linear-gradient(135deg, #ec4899, #db2777)'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'260\'%3E%3Crect width=\'400\' height=\'260\' fill=\'%23ec4899\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'28\' font-weight=\'bold\' fill=\'white\'%3ETile Tactics%3C/text%3E%3C/svg%3E'">
-                        <div class="game-overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <div class="game-content">
-                        <h3 class="game-title">Tile Tactics: 2048 Card Puzzle</h3>
-                        <div class="game-meta">Mobile Puzzle • Google Play</div>
-                        <div class="game-card-buttons">
-                            <a href="https://play.google.com/store/apps/details?id=com.pandlebury.numbergametest" class="btn btn-primary game-card-btn" target="_blank" onclick="event.stopPropagation()">Google Play</a>
-                            <a href="https://pandlebury.itch.io/tiletactics" class="btn btn-secondary game-card-btn" target="_blank" onclick="event.stopPropagation()">Play Now</a>
-                            <a href="https://youtu.be/sdUEzP8cIRg" class="btn btn-secondary game-card-btn" target="_blank" onclick="event.stopPropagation()">Trailer</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Educational Game -->
-                <div class="game-card"
-                     data-image="egitim-uygulamasi.png"
-                     data-title="Educational Game for Special Needs"
-                     data-meta="Educational • Team Project"
-                     data-description="Comprehensive accessible learning platform featuring 4 diverse game types, real-time analytics dashboard, and teacher management system with scalable content architecture."
-                     data-features='["4 game types across 3 difficulty levels & 9 categories","ScriptableObject-based modular content system","Real-time performance tracking & analytics dashboard","JSON-based persistent data architecture"]'
-                     data-tech='["Unity 2D","C#","ScriptableObjects","Analytics","Accessibility"]'
-                     data-links='[{"text":"Download","url":"https://pandlebury.itch.io/egitimuygulamasi","type":"primary"}]'>
-                    <div class="game-image-wrapper">
-                        <img src="egitim-uygulamasi.png" alt="Educational Game for Children" class="game-image" onerror="this.style.background='linear-gradient(135deg, #10b981, #059669)'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'260\'%3E%3Crect width=\'400\' height=\'260\' fill=\'%2310b981\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'24\' font-weight=\'bold\' fill=\'white\'%3EEducational Game%3C/text%3E%3C/svg%3E'">
-                        <div class="game-overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <div class="game-content">
-                        <h3 class="game-title">Educational Game for Special Needs</h3>
-                        <div class="game-meta">Educational • Itch.io</div>
-                        <div class="game-card-buttons">
-                            <a href="https://pandlebury.itch.io/egitimuygulamasi" class="btn btn-primary game-card-btn" target="_blank" onclick="event.stopPropagation()">Download</a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Neon Ascent -->
-                <div class="game-card"
-                     data-image="neon-ascent.jpg"
-                     data-title="Neon Ascent"
-                     data-meta="2D Platformer • Multi-Platform"
-                     data-description="Fast-paced pixel art platformer with precision controls and competitive high-score mechanics. Successfully launched on both HTML5 and Android platforms."
-                     data-features='["Polished pixel art aesthetics with vibrant neon theme","Cross-platform optimization for web and mobile","Iterative design refined through extensive playtesting"]'
-                     data-tech='["Unity 2D","C#","Pixel Art","Mobile","WebGL"]'
-                     data-links='[{"text":"Play Now","url":"https://pandlebury.itch.io/neon-jump","type":"primary"}]'>
-                    <div class="game-image-wrapper">
-                        <img src="neon-ascent.jpg" alt="Neon Ascent - 2D Platformer" class="game-image" onerror="this.style.background='linear-gradient(135deg, #f59e0b, #d97706)'; this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'260\'%3E%3Crect width=\'400\' height=\'260\' fill=\'%23f59e0b\'/%3E%3Ctext x=\'50%25\' y=\'50%25\' dominant-baseline=\'middle\' text-anchor=\'middle\' font-family=\'Arial\' font-size=\'32\' font-weight=\'bold\' fill=\'white\'%3ENeon Ascent%3C/text%3E%3C/svg%3E'">
-                        <div class="game-overlay">
-                            <span>View Details</span>
-                        </div>
-                    </div>
-                    <div class="game-content">
-                        <h3 class="game-title">Neon Ascent</h3>
-                        <div class="game-meta">2D Platformer • Itch.io</div>
-                        <div class="game-card-buttons">
-                            <a href="https://pandlebury.itch.io/neon-jump" class="btn btn-primary game-card-btn" target="_blank" onclick="event.stopPropagation()">Play</a>
-                        </div>
+        <!-- Education -->
+        <section class="section">
+            <h2>Education</h2>
+            <div class="timeline-list">
+                <div class="timeline-entry">
+                    <div class="timeline-date">2020 — 2025</div>
+                    <div class="timeline-info">
+                        <div class="timeline-company">Istanbul University-Cerrahpasa</div>
+                        <h3>B.Sc. in Computer Engineering</h3>
+                        <p>Graduated with focus on Systems Engineering. Senior project "Hellraze" awarded "Best
+                            Technical Implementation".</p>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="container">
-            <div class="section-header">
-                <!-- <div class="section-badge">💪 AdvancedISE</div> -->
-                <h2>Technical Arsenal</h2>
-            </div>
-
+        <!-- Skills -->
+        <section class="section">
+            <h2>Technical Skills</h2>
             <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">🎮</div>
-                    <h3>Game Engines</h3>
-                    <ul class="skill-list">
-                        <li>Unity 3D (Advanced)</li>
-                        <li>Unity 2D (Advanced)</li>
-                        <li>Unreal Engine 4/5</li>
-                        <li>Plastic SCM</li>
-                    </ul>
-                </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">⚙️</div>
-                    <h3>Game Systems</h3>
+                <div class="skill-group">
+                    <h4>Gameplay & Systems</h4>
                     <ul class="skill-list">
-                        <li>Combat Systems</li>
-                        <li>AI & State Machines</li>
-                        <li>Progression Systems</li>
+                        <li>Unity (Advanced)</li>
+                        <li>Finite State Machines</li>
                         <li>Procedural Generation</li>
-                        <li>Economy Design</li>
+                        <li>Game Economy & Balancing</li>
+                        <li>Pathfinding / AI</li>
                     </ul>
                 </div>
 
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Programming</h3>
+                <div class="skill-group">
+                    <h4>Optimization & Architecture</h4>
                     <ul class="skill-list">
-                        <li>C# (Advanced)</li>
-                        <li>Python, Java, C++</li>
-                        <li>OOP Principles</li>
-                        <li>Design Patterns</li>
-                        <li>Code Optimization</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🎨</div>
-                    <h3>Design & Polish</h3>
-                    <ul class="skill-list">
-                        <li>Level Design</li>
-                        <li>Game UI/UX</li>
-                        <li>Animation Systems</li>
-                        <li>VFX Implementation</li>
-                        <li>Audio Integration</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">📱</div>
-                    <h3>Platforms</h3>
-                    <ul class="skill-list">
-                        <li>Mobile (Android/iOS)</li>
-                        <li>PC (Win/Mac/Linux)</li>
-                        <li>WebGL</li>
-                        <li>Cross-platform</li>
-                    </ul>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>Advanced Unity</h3>
-                    <ul class="skill-list">
-                        <li>ScriptableObjects</li>
-                        <li>Coroutines & Async</li>
                         <li>Object Pooling</li>
-                        <li>DOTween Animations</li>
-                        <li>Unity Ads SDK</li>
+                        <li>Grid-Based Spatial Partitioning</li>
+                        <li>Occlusion Culling</li>
+                        <li>Design Patterns (Observer, Strategy, Factory)</li>
+                        <li>ScriptableObjects</li>
                     </ul>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <!-- <div class="section-badge">👨‍💻 MEET THE DEVELOPER</div> -->
-                <h2>About Me</h2>
-            </div>
-
-            <div class="about-content">
-                <p class="about-text">
-                    I'm a <strong>Computer Science student</strong> at Istanbul University-Cerrahpasa (graduating September 2025) 
-                    with a deep passion for game development. My Advancedise lies in creating <strong>engaging gameplay experiences</strong> 
-                    through innovative mechanics and robust systems architecture using Unity.
-                </p>
-                <p class="about-text">
-                    From <strong>procedurally generated roguelike FPS games</strong> to <strong>strategic mobile puzzles</strong>, 
-                    I focus on building highly replayable experiences with deep player progression systems. My work on HELLRAZE 
-                    earned the <strong>"Best Technical Implementation" award</strong> at the 2025 Game Development Project Days.
-                </p>
-                <p class="about-text">
-                    I'm proficient in <strong>C#</strong> and experienced with modern game development patterns including 
-                    Manager, State, Observer, and Factory patterns. I regularly share development insights on my 
-                    <strong>YouTube channel</strong>, showcasing iterative design processes and technical implementations.
-                </p>
-
-                <div class="quick-links">
-                    <a href="https://pandlebury.itch.io" class="btn btn-primary" target="_blank">🎮 Itch.io Portfolio</a>
-                    <a href="https://www.youtube.com/@pandledev" class="btn btn-secondary" target="_blank">📺 YouTube Devlogs</a>
-                    <a href="https://github.com/iseriomer" class="btn btn-secondary" target="_blank">💻 GitHub Projects</a>
+                <div class="skill-group">
+                    <h4>Languages & Tools</h4>
+                    <ul class="skill-list">
+                        <li>C#</li>
+                        <li>Python (FastAPI)</li>
+                        <li>JavaScript / HTML5 Canvas</li>
+                        <li>React / Flutter</li>
+                        <li>Git / Plastic SCM / Docker</li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- AI & Software Teaser -->
-    <section id="ai-software" style="background: radial-gradient(ellipse at center, rgba(16, 185, 129, 0.08), transparent 70%);">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">BEYOND GAMING</div>
-                <h2>AI & Software Engineering</h2>
-                <p class="section-description">
-                    Beyond games, I develop AI systems, RAG implementations, and enterprise software solutions. 
-                    Explore my work on intelligent chatbots, document processing systems, and NLP applications.
-                </p>
             </div>
-            <div style="text-align: center; margin-top: 48px;">
-                <a href="Ömer Faruk İşeri.pdf" class="btn btn-primary" download>💻 Software Engineer CV</a>
-                <a href="https://github.com/iseriomer" class="btn btn-secondary" target="_blank">🤖 View AI Projects</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-badge">📬 GET IN TOUCH</div>
-                <h2>Let's Collaborate</h2>
-                <p class="section-description">
-                    Have a game idea? Looking for a Unity developer? Let's create something amazing together!
-                </p>
-            </div>
+        <footer>
+            <p>&copy; 2026 Ömer Faruk İşeri. Designed with a focus on systems.</p>
+        </footer>
 
-            <div class="contact-content">
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required placeholder="John Doe">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required placeholder="john@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" required placeholder="Tell me about your project..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Send Message</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/ömer-faruk-işeri-2a4a31223/" class="social-link" target="_blank" aria-label="LinkedIn">💼</a>
-                <a href="https://github.com/iseriomer" class="social-link" target="_blank" aria-label="GitHub">💻</a>
-                <a href="https://pandlebury.itch.io" class="social-link" target="_blank" aria-label="Itch.io">🎮</a>
-                <a href="https://www.youtube.com/@pandledev" class="social-link" target="_blank" aria-label="YouTube">📺</a>
-            </div>
-            <p style="font-size: 1.1rem; font-weight: 600;">&copy; 2025 Ömer Faruk İşeri. All rights reserved.</p>
-            <p style="opacity: 0.7; margin-top: 12px; font-size: 0.95rem;">Unity Game Developer | İstanbul, Turkey 🇹🇷</p>
-        </div>
-    </footer>
-
-    <!-- Scroll to Top -->
-    <!-- <div class="scroll-top" id="scrollTop">↑</div> -->
-
-    <!-- Toast -->
-    <div class="toast" id="toast"></div>
-
-    <!-- Project Modal -->
-    <div id="projectModal" class="modal-overlay">
-        <div class="modal-content">
-            <button class="modal-close" aria-label="Close modal">&times;</button>
-            <div class="modal-image-wrapper">
-                <button class="gallery-nav gallery-prev" aria-label="Previous image">‹</button>
-                <img id="modalImage" src="" alt="" class="modal-image">
-                <button class="gallery-nav gallery-next" aria-label="Next image">›</button>
-                <div class="gallery-indicator">
-                    <span id="galleryCurrent">1</span> / <span id="galleryTotal">1</span>
-                </div>
-            </div>
-            <div class="modal-body">
-                <div class="modal-header">
-                    <div>
-                        <h2 id="modalTitle" class="modal-title"></h2>
-                        <div id="modalMeta" class="modal-meta"></div>
-                    </div>
-                    <div id="modalAward" class="modal-award-badge"></div>
-                </div>
-                <p id="modalDescription" class="modal-description"></p>
-                <ul id="modalFeatures" class="modal-features"></ul>
-                <div id="modalTech" class="modal-tech-stack"></div>
-                <div id="modalLinks" class="modal-links"></div>
-            </div>
-        </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- Minimal script for smooth scroll if needed, largely CSS only -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
 </body>
+
 </html>
