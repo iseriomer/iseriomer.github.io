@@ -29,18 +29,27 @@
                     <span style="display: block;">Istanbul, Turkey</span>
                     <span style="display: block;">omerfarukiseri21@gmail.com</span>
                 </div>
+                <nav class="site-nav"
+                    style="margin-top: 1rem; font-family: var(--font-mono); font-size: 0.9rem; display: flex; gap: 1rem;">
+                    <a href="https://github.com/iseriomer" target="_blank">GitHub</a>
+                    <a href="https://www.linkedin.com/in/%C3%B6mer-faruk-i%C5%9Feri/" target="_blank">LinkedIn</a>
+                    <a href="https://pandlebury.itch.io" target="_blank">Itch.io</a>
+                    <a href="Ömer Faruk İşeri.pdf" target="_blank">Resume [PDF]</a>
+                </nav>
             </div>
-            <nav class="social-nav">
-                <a href="https://github.com/iseriomer" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/iseriomer" target="_blank">LinkedIn</a>
-                <a href="https://iseriomer.itch.io" target="_blank">Itch.io</a>
-                <a href="Ömer Faruk İşeri.pdf" target="_blank">Resume [PDF]</a>
+            <nav class="social-nav" style="display: flex; flex-direction: column; align-items: flex-end; gap: 0.5rem;">
+                <a href="#projects" style="font-size: 1rem;">Projects</a>
+                <a href="#experience" style="font-size: 1rem;">Experience</a>
+                <a href="#education" style="font-size: 1rem;">Education</a>
+                <a href="#skills" style="font-size: 1rem;">Skills</a>
             </nav>
+
         </header>
 
         <!-- Projects -->
-        <main class="section">
+        <main class="section" id="projects">
             <h2>Select Works</h2>
+
 
             <!-- Hellraze Case Study -->
             <article class="project">
@@ -69,7 +78,7 @@
                             systems.</p>
 
                         <div class="project-links">
-                            <a href="https://iseriomer.itch.io/hellraze" target="_blank" class="btn-link">Play on
+                            <a href="https://pandlebury.itch.io/hellraze" target="_blank" class="btn-link">Play on
                                 Itch.io</a>
                             <a href="https://github.com/iseriomer" target="_blank" class="btn-link">Source Code</a>
                         </div>
@@ -151,9 +160,10 @@
                 <div class="project-header">
                     <h3>Tile Tactics</h3>
                     <div class="tech-stack">
-                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">Unity 2D</span>
                         <span class="tech-tag">Design Patterns</span>
                         <span class="tech-tag">Mobile</span>
+                        <span class="tech-tag">Monetization</span>
                     </div>
                 </div>
 
@@ -169,9 +179,9 @@
                             active users with a 4.5/5 stars rating.</p>
 
                         <div class="project-links">
-                            <a href="https://play.google.com/store/apps/details?id=com.tile.tactics" target="_blank"
-                                class="btn-link">Google Play</a>
-                            <a href="https://iseriomer.itch.io/tile-tactics" target="_blank" class="btn-link">Play on
+                            <a href="https://play.google.com/store/apps/details?id=com.pandlebury.numbergametest"
+                                target="_blank" class="btn-link">Google Play</a>
+                            <a href="https://pandlebury.itch.io/tiletactics" target="_blank" class="btn-link">Play on
                                 Itch.io</a>
                         </div>
                     </div>
@@ -180,6 +190,8 @@
                         <ul>
                             <li><strong>Architecture:</strong> Heavily utilized <strong>Manager, State, and Observer
                                     patterns</strong> for a decoupled, event-driven codebase.</li>
+                            <li><strong>Monetization:</strong> Integrated <strong>Unity Ads (LevelPlay SDK)</strong> for
+                                rewarded video monetization with an ad-based continue mechanic.</li>
                             <li><strong>ScriptableObjects:</strong> Managed all game data (27 cards, 14 perks) for rapid
                                 iteration and balancing.</li>
                             <li><strong>Strategy Pattern:</strong> Implemented weighted random card distribution
@@ -230,9 +242,10 @@
         </main>
 
         <!-- Experience -->
-        <section class="section">
+        <section class="section" id="experience">
             <h2>Experience</h2>
             <div class="timeline-list">
+
 
                 <div class="timeline-entry">
                     <div class="timeline-date">Nov 2025 — Present</div>
@@ -247,7 +260,7 @@
                 </div>
 
                 <div class="timeline-entry">
-                    <div class="timeline-date">Dec 2024 — Mar 2025</div>
+                    <div class="timeline-date">Dec 2024 — <br> Mar 2025</div>
                     <div class="timeline-info">
                         <div class="timeline-company">Carbon Consulting</div>
                         <h3>Intern (LLM & Automation)</h3>
@@ -257,7 +270,7 @@
                 </div>
 
                 <div class="timeline-entry">
-                    <div class="timeline-date">Aug 2024 — Sep 2024</div>
+                    <div class="timeline-date">Aug 2024 — <br> Sep 2024</div>
                     <div class="timeline-info">
                         <div class="timeline-company">GoLive</div>
                         <h3>Intern (RAG System)</h3>
@@ -270,9 +283,10 @@
         </section>
 
         <!-- Education -->
-        <section class="section">
+        <section class="section" id="education">
             <h2>Education</h2>
             <div class="timeline-list">
+
                 <div class="timeline-entry">
                     <div class="timeline-date">2020 — 2025</div>
                     <div class="timeline-info">
@@ -286,9 +300,10 @@
         </section>
 
         <!-- Skills -->
-        <section class="section">
+        <section class="section" id="skills">
             <h2>Technical Skills</h2>
             <div class="skills-grid">
+
 
                 <div class="skill-group">
                     <h4>Gameplay & Systems</h4>
@@ -327,22 +342,18 @@
         </section>
 
         <footer>
-            <p>&copy; 2026 Ömer Faruk İşeri. Designed with a focus on systems.</p>
+            <p>&copy; 2026 Ömer Faruk İşeri. All rights reserved.</p>
         </footer>
 
     </div>
 
-    <!-- Minimal script for smooth scroll if needed, largely CSS only -->
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
+    <!-- Lightbox -->
+    <div id="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="Full size screenshot">
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
