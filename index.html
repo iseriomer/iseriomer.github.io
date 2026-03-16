@@ -85,7 +85,6 @@
                         </div>
                     </div>
                     <div class="project-details">
-                        <h4>System Architecture</h4>
                         <ul>
                             <li><strong>Custom Occlusion Culling:</strong> Optimized performance for procedurally
                                 generated rooms by implementing a custom culling system in Unity.</li>
@@ -135,7 +134,6 @@
                                 </div>
                     </div>
                     <div class="project-details">
-                        <h4>Technical Details</h4>
                         <ul>
                             <li><strong>Custom Engine:</strong> Built a memory-efficient game loop and rendering
                                 pipeline from scratch without external frameworks.</li>
@@ -187,7 +185,6 @@
                         </div>
                     </div>
                     <div class="project-details">
-                        <h4>System Design</h4>
                         <ul>
                             <li><strong>Architecture:</strong> Heavily utilized <strong>Manager, State, and Observer
                                     patterns</strong> for a decoupled, event-driven codebase.</li>
@@ -203,6 +200,58 @@
                 <div class="screenshot-grid">
                     <img src="tile-tactics.png" alt="Tile Tactics Gameplay">
                     <img src="tile-tactics1.png" alt="Tile Tactics Gameplay 2">
+                </div>
+            </article>
+
+            <!-- SandBlock Case Study -->
+            <article class="project">
+                <div class="project-header">
+                    <h3>SandBlock: Brain Puzzle</h3>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Unity</span>
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">Particle Sim</span>
+                        <span class="tech-tag">Mobile</span>
+                        <span class="tech-tag">Google Play</span>
+                    </div>
+                </div>
+
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/nMV3Z8AYuWU" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="project-content">
+                    <div class="project-description">
+                        <p>A physics-based sand puzzle game where players pour <strong>colored sand particles</strong>
+                            into grid cells to match target patterns. Features a custom <strong>4px particle
+                                simulation</strong> with gravity, displacement, and real-time merge detection. Released
+                            on Google Play as a solo developer.</p>
+
+                        <div class="project-links">
+                            <a href="https://play.google.com/store/apps/details?id=com.pandlebury.sandblock"
+                                target="_blank" class="btn-link">Google Play</a>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <ul>
+                            <li><strong>Manager Pattern:</strong> 10+ specialized managers with Observer Pattern for a
+                                fully decoupled, event-driven codebase.</li>
+                            <li><strong>Cell-Merge Algorithm:</strong> 70% particle density threshold triggers a
+                                solidification pipeline with wrong-color ejection logic.</li>
+                            <li><strong>ScriptableObject Databases:</strong> Level &amp; color data in
+                                <strong>LevelDatabase</strong> / <strong>ColorDatabase</strong>, authored via a custom
+                                <strong>LevelEditorWindow</strong>.</li>
+                            <li><strong>Localization System:</strong> Multi-language UI via
+                                <strong>LocalizationManager</strong> with automatic locale detection.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="screenshot-grid">
+                    <img src="sandblock (1).jpeg" alt="SandBlock Gameplay 1">
+                    <img src="sandblock (2).jpeg" alt="SandBlock Gameplay 2">
+                    <img src="sandblock (3).jpeg" alt="SandBlock Gameplay 3">
                 </div>
             </article>
 
@@ -236,7 +285,6 @@
                         </div>
                     </div>
                     <div class="project-details">
-                        <h4>Technical Implementation</h4>
                         <ul>
                             <li><strong>Graph-Based Matching:</strong> Implemented BFS matching algorithms to detect
                                 complex shapes (T, L, +) and cascade combo chains.</li>
