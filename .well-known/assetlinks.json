@@ -1,0 +1,14 @@
+[
+    {
+        "relation": [
+            "delegate_permission/common.handle_all_urls"
+        ],
+        "target": {
+            "namespace": "android_app",
+            "package_name": "com.pandlebury.pixeldash",
+            "sha256_cert_fingerprints": [
+                "30:94:30:B5:56:35:2F:6B:2F:E1:F4:F0:64:04:EA:6F:66:8B:73:98:AE:E8:EC:9E:55:2C:4A:F7:68:82:01:0B"
+            ]
+        }
+    }
+]
