@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirecting to Pixel Dash...</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <title>Pixel Dash - Joining Game...</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -15,69 +15,81 @@
             justify-content: center;
             height: 100vh;
             margin: 0;
-            background-color: #f7f9fc;
-            color: #1a1a1a;
+            background-color: #0b0e14;
+            color: #ffffff;
         }
 
         .container {
             text-align: center;
-            padding: 2.5rem;
-            background: white;
-            border-radius: 16px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.06), 0 2px 4px rgba(0, 0, 0, 0.04);
+            padding: 2.5rem 2rem;
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 20px;
+            box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
             max-width: 90%;
-            width: 320px;
+            width: 340px;
         }
 
         h1 {
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 600;
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            color: #58a6ff;
         }
 
         p {
-            margin-bottom: 2rem;
-            color: #666;
+            margin-bottom: 1.5rem;
+            color: #8b949e;
             font-size: 0.95rem;
+            line-height: 1.4;
         }
 
-        a {
-            display: inline-block;
-            background-color: #2e64e5;
-            color: white;
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        a.btn {
+            display: block;
             text-decoration: none;
-            padding: 12px 24px;
-            border-radius: 8px;
-            font-weight: 600;
-            transition: background-color 0.2s, transform 0.1s;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: transform 0.15s, opacity 0.15s;
         }
 
-        a:hover {
-            background-color: #1c4bba;
+        a.btn-primary {
+            background: linear-gradient(135deg, #238636, #2ea043);
+            color: white;
+            box-shadow: 0 4px 12px rgba(46, 160, 67, 0.3);
         }
 
-        a:active {
-            transform: scale(0.98);
+        a.btn-secondary {
+            background: #21262d;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+        }
+
+        a.btn:active {
+            transform: scale(0.97);
         }
 
         .spinner {
-            border: 4px solid rgba(46, 100, 229, 0.1);
+            border: 4px solid rgba(88, 166, 255, 0.15);
             width: 48px;
             height: 48px;
             border-radius: 50%;
-            border-left-color: #2e64e5;
+            border-left-color: #58a6ff;
             animation: spin 1s cubic-bezier(0.5, 0.1, 0.4, 0.9) infinite;
             margin: 0 auto 1.5rem auto;
         }
 
         @keyframes spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
         }
     </style>
 </head>
@@ -86,32 +98,38 @@
     <div class="container">
         <div class="spinner"></div>
         <h1>Pixel Dash</h1>
-        <p>Redirecting to the Google Play Store...</p>
-        <a id="play-store-link" href="https://play.google.com/store/apps/details?id=com.pandlebury.pixeldash">Install
-            Now</a>
+        <p id="status-text">Oyuna bağlanılıyor...</p>
+        <div class="btn-group">
+            <a id="open-app-btn" class="btn btn-primary" href="#">▶ Oyunu Aç</a>
+            <a id="play-store-link" class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.pandlebury.pixeldash">Google Play'den İndir</a>
+        </div>
     </div>
 
     <script>
-        // Use the confirmed package ID for PixelDash
         const packageId = "com.pandlebury.pixeldash";
         let playStoreUrl = `https://play.google.com/store/apps/details?id=${packageId}`;
+        const queryString = window.location.search || "";
 
-        // Get the current query string directly
-        const queryString = window.location.search;
-
-        // If there are parameters (like ?level=1-fi0ri), pass them through via the 'referrer' parameter
         if (queryString && queryString.length > 1) {
             const queryParams = queryString.substring(1);
-            // encodeURIComponent ensures the query parameters stay intact as a single referrer value
             playStoreUrl += `&referrer=${encodeURIComponent(queryParams)}`;
         }
 
-        // Update the fallback link just in case
         document.getElementById("play-store-link").href = playStoreUrl;
 
-        // Perform the automatic redirection
-        // We use replace() so the user doesn't get stuck in a back-button redirect loop
-        window.location.replace(playStoreUrl);
+        const isAndroid = /Android/i.test(navigator.userAgent);
+        const intentUrl = `intent://iseriomer.github.io/pixeldash/${queryString}#Intent;scheme=https;package=${packageId};S.browser_fallback_url=${encodeURIComponent(playStoreUrl)};end`;
+        
+        document.getElementById("open-app-btn").href = isAndroid ? intentUrl : playStoreUrl;
+
+        if (isAndroid) {
+            window.location.replace(intentUrl);
+        } else {
+            // On desktop/iOS fallback to Play Store after short pause
+            setTimeout(() => {
+                window.location.replace(playStoreUrl);
+            }, 1200);
+        }
     </script>
 </body>
 
