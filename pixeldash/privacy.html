@@ -3,93 +3,502 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - Pixel Dash: Infinite Maze</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <title>Privacy Policy & Terms of Service - Games by Ömer Faruk İşeri</title>
+    <meta name="description" content="Comprehensive Universal Privacy Policy and Terms of Service for all games and applications published by Ömer Faruk İşeri, including Pixel Dash: Infinite Maze and other titles.">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0b0e14;
-            color: #c9d1d9;
-            line-height: 1.6;
+        :root {
+            --bg: #090d16;
+            --surface: #111726;
+            --surface-hover: #172033;
+            --border: #232e45;
+            --border-highlight: #3b82f6;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --text-muted: #64748b;
+            --accent: #38bdf8;
+            --accent-glow: rgba(56, 189, 248, 0.15);
+            --success: #10b981;
+            --warning: #f59e0b;
+        }
+
+        * {
+            box-sizing: border-box;
             margin: 0;
-            padding: 40px 20px;
+            padding: 0;
         }
-        .container {
-            max-width: 800px;
+
+        body {
+            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg);
+            color: var(--text-primary);
+            line-height: 1.7;
+            padding: 40px 16px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .wrapper {
+            max-width: 880px;
             margin: 0 auto;
-            background: #161b22;
-            padding: 40px;
-            border-radius: 16px;
-            border: 1px solid #30363d;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
         }
+
+        /* Top Header */
+        header {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: var(--accent-glow);
+            border: 1px solid rgba(56, 189, 248, 0.3);
+            color: var(--accent);
+            padding: 4px 12px;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 12px;
+        }
+
         h1 {
-            color: #58a6ff;
-            font-size: 2rem;
-            margin-top: 0;
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            margin-bottom: 8px;
         }
-        h2 {
-            color: #f0f6fc;
-            font-size: 1.25rem;
-            margin-top: 28px;
-            border-bottom: 1px solid #21262d;
-            padding-bottom: 8px;
+
+        .subtitle {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
         }
-        p, li {
-            color: #8b949e;
-            font-size: 0.95rem;
+
+        .meta-bar {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-family: 'JetBrains Mono', monospace;
         }
-        ul {
-            padding-left: 20px;
+
+        .meta-bar span strong {
+            color: var(--text-secondary);
         }
-        a {
-            color: #58a6ff;
+
+        /* Quick Navigator Box */
+        .toc-box {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 20px 24px;
+            margin-bottom: 36px;
+        }
+
+        .toc-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 8px 16px;
+        }
+
+        .toc-link {
+            color: var(--text-secondary);
             text-decoration: none;
+            font-size: 0.88rem;
+            transition: color 0.15s;
         }
+
+        .toc-link:hover {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+
+        /* Card Section */
+        .policy-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+        }
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .sec-num {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--accent);
+            font-size: 1rem;
+            background: var(--accent-glow);
+            padding: 2px 8px;
+            border-radius: 6px;
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #e2e8f0;
+            margin: 18px 0 8px 0;
+        }
+
+        p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 12px 0 16px 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 24px;
+            color: var(--text-secondary);
+            font-size: 0.93rem;
+            margin-bottom: 8px;
+        }
+
+        li::before {
+            content: "•";
+            position: absolute;
+            left: 8px;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
         a:hover {
             text-decoration: underline;
         }
-        .date {
-            color: #6e7681;
+
+        /* Callout alert box */
+        .callout {
+            background: rgba(56, 189, 248, 0.05);
+            border-left: 4px solid var(--accent);
+            padding: 16px 20px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+        }
+
+        .callout-warning {
+            background: rgba(245, 158, 11, 0.05);
+            border-left-color: var(--warning);
+        }
+
+        .callout-title {
+            font-weight: 700;
+            color: #ffffff;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        /* Disclaimer specific */
+        .disclaimer-box {
+            background: rgba(239, 68, 68, 0.04);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+        }
+
+        .disclaimer-box p {
+            color: #cbd5e1;
+            font-size: 0.88rem;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 40px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+            color: var(--text-muted);
             font-size: 0.85rem;
-            margin-bottom: 24px;
+        }
+
+        .contact-card {
+            background: linear-gradient(135deg, rgba(56, 189, 248, 0.08), rgba(30, 41, 59, 0.5));
+            border: 1px solid rgba(56, 189, 248, 0.25);
+            border-radius: 14px;
+            padding: 24px;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .contact-btn {
+            display: inline-block;
+            background: #0284c7;
+            color: #ffffff;
+            font-weight: 700;
+            padding: 10px 24px;
+            border-radius: 10px;
+            text-decoration: none;
+            margin-top: 12px;
+            transition: background 0.15s, transform 0.1s;
+        }
+
+        .contact-btn:hover {
+            background: #0369a1;
+            text-decoration: none;
+            transform: translateY(-1px);
+        }
+
+        @media (max-width: 640px) {
+            h1 { font-size: 1.75rem; }
+            .policy-card { padding: 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Privacy Policy</h1>
-        <div class="date">Last updated: September 30, 2026</div>
 
-        <p>This Privacy Policy applies to the mobile game <strong>Pixel Dash: Infinite Maze</strong> ("the App"), developed by <strong>Ömer Faruk İşeri</strong>. We respect your privacy and are committed to protecting any information processed through the App.</p>
+<div class="wrapper">
 
-        <h2>1. Information We Collect</h2>
-        <p>The App does not require you to provide personally identifiable information (such as real name, email address, or phone number) to play. We may process:</p>
-        <ul>
-            <li><strong>Game Progress & Nickname:</strong> In-game player nicknames chosen by you, scores, and currency stored locally on your device and synchronized via Firebase for online multiplayer and leaderboards.</li>
-            <li><strong>Device & Usage Data:</strong> Device model, operating system version, and general gameplay metrics for stability and performance.</li>
-            <li><strong>Advertising Identifiers:</strong> Google Advertising ID used by Google AdMob to deliver advertisements in compliance with applicable laws.</li>
-        </ul>
+    <!-- Header -->
+    <header>
+        <div class="badge-pill">🛡️ Official Legal Documentation</div>
+        <h1>Universal Privacy Policy &amp; Terms of Service</h1>
+        <p class="subtitle">Applicable to all mobile games and interactive digital applications published by independent developer <strong>Ömer Faruk İşeri</strong>.</p>
+        <div class="meta-bar">
+            <span><strong>Effective Date:</strong> September 30, 2026</span>
+            <span>•</span>
+            <span><strong>Last Updated:</strong> September 30, 2026</span>
+            <span>•</span>
+            <span><strong>Contact:</strong> omerfarukiseri21@gmail.com</span>
+        </div>
+    </header>
 
-        <h2>2. Third-Party Services & Advertising</h2>
-        <p>The App integrates trusted third-party services that may collect information used to identify you:</p>
-        <ul>
-            <li><strong>Google AdMob:</strong> Used for serving rewarded, interstitial, and banner ads. AdMob may collect and process device identifiers and ad interactions. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
-            <li><strong>Google User Messaging Platform (UMP):</strong> Used to gather user consent under the General Data Protection Regulation (GDPR) in the European Economic Area (EEA) and the UK.</li>
-            <li><strong>Google Firebase:</strong> Used for real-time multiplayer networking and leaderboard storage.</li>
-        </ul>
-
-        <h2>3. User Consent & GDPR (EEA / UK Users)</h2>
-        <p>For users in the European Economic Area (EEA), the UK, and Switzerland, we use Google's certified Consent Management Platform (CMP). You can choose whether to consent to personalized advertising, manage your consent preferences, or decline non-essential data processing at any time via the in-game consent dialog.</p>
-
-        <h2>4. Children's Privacy</h2>
-        <p>The App does not knowingly collect personal information from children under the age of 13. If you believe a child has provided us with personal data, please contact us so we can promptly delete it.</p>
-
-        <h2>5. Changes to This Privacy Policy</h2>
-        <p>We may update our Privacy Policy from time to time. Any changes will be posted on this page with an updated date.</p>
-
-        <h2>6. Contact Us</h2>
-        <p>If you have any questions or suggestions regarding this Privacy Policy, please contact us at: <a href="mailto:omer.iseri@carbonconsulting.com">omer.iseri@carbonconsulting.com</a></p>
+    <!-- Navigation -->
+    <div class="toc-box">
+        <div class="toc-title">Table of Contents</div>
+        <div class="toc-grid">
+            <a class="toc-link" href="#sec-scope">1. Scope of This Policy</a>
+            <a class="toc-link" href="#sec-data">2. Information We Collect</a>
+            <a class="toc-link" href="#sec-use">3. How Information Is Used</a>
+            <a class="toc-link" href="#sec-thirdparty">4. Third-Party Partners &amp; SDKs</a>
+            <a class="toc-link" href="#sec-ads">5. Advertising &amp; Google AdMob</a>
+            <a class="toc-link" href="#sec-gdpr">6. GDPR (EEA &amp; UK Consent)</a>
+            <a class="toc-link" href="#sec-ccpa">7. California Privacy (CCPA)</a>
+            <a class="toc-link" href="#sec-coppa">8. Children's Privacy (COPPA)</a>
+            <a class="toc-link" href="#sec-iap">9. In-App Purchases &amp; Virtual Goods</a>
+            <a class="toc-link" href="#sec-liability">10. Limitation of Liability</a>
+            <a class="toc-link" href="#sec-rights">11. Your Rights &amp; Data Deletion</a>
+            <a class="toc-link" href="#sec-contact">12. Contact Information</a>
+        </div>
     </div>
+
+    <!-- Section 1 -->
+    <div class="policy-card" id="sec-scope">
+        <h2><span class="sec-num">01</span> Scope of This Policy</h2>
+        <p>This Universal Privacy Policy and Terms of Service ("Policy") legally governs your access to and use of all mobile games, software applications, websites, and associated online services (collectively, the "Games" or "Services") developed and published by <strong>Ömer Faruk İşeri</strong> ("Developer", "we", "us", or "our").</p>
+        <p>This Policy applies universally to all titles released under our Google Play Developer account, Apple App Store account, or online web distribution channels, including but not limited to:</p>
+        <ul>
+            <li><strong>Pixel Dash: Infinite Maze</strong> (Package: <code>com.pandlebury.pixeldash</code>)</li>
+            <li><strong>Neon Blast</strong></li>
+            <li><strong>Tile Tactics</strong></li>
+            <li>All future interactive entertainment titles, updates, patches, and expansions published by the Developer.</li>
+        </ul>
+        <p>By downloading, installing, accessing, or playing any of our Games, you acknowledge that you have read, understood, and unconditionally agree to the terms described herein.</p>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="policy-card" id="sec-data">
+        <h2><span class="sec-num">02</span> Information We Collect</h2>
+        <p>We believe in privacy-by-design. We do not require you to provide government-issued identification, full legal name, physical street address, or phone numbers to play our Games. The data collected falls into the following categories:</p>
+
+        <h3>A. Information Automatically Collected by Devices &amp; SDKs</h3>
+        <ul>
+            <li><strong>Device Information:</strong> Device model, manufacturer, operating system version, system language, screen resolution, and available memory for performance optimization.</li>
+            <li><strong>Network &amp; Diagnostics:</strong> Coarse geolocation (country or city level derived from IP address; we do <em>not</em> access precise GPS location), network connectivity type (Wi-Fi/Cellular), crash reports, and game session logs.</li>
+            <li><strong>Mobile Advertising Identifiers:</strong> Google Advertising ID (GAID) or Apple ID for Advertisers (IDFA), subject to your explicit device-level and in-app consent preferences.</li>
+        </ul>
+
+        <h3>B. Information Generated During Gameplay</h3>
+        <ul>
+            <li><strong>Player Profiles &amp; Nicknames:</strong> Self-selected in-game display names (pseudonyms) created by you to identify yourself in multiplayer lobbies and leaderboards.</li>
+            <li><strong>Game Progress &amp; Telemetry:</strong> High scores, wave progression, unlocked characters, virtual currency balances (gold, gems), chest unlock timestamps, and matchmaking ELO ratings.</li>
+            <li><strong>Multiplayer Match Data:</strong> Temporary game room codes, real-time swipe/movement coordinates transmitted between peers, and match outcome timestamps.</li>
+        </ul>
+
+        <h3>C. In-App Purchase &amp; Financial Information</h3>
+        <p>All financial transactions (such as purchasing "No Ads" or "Starter Pack") are processed exclusively and securely by official store platforms (<strong>Google Play Billing</strong> or <strong>Apple In-App Purchases</strong>). We do <strong>never</strong> collect, receive, store, or process your credit card numbers, bank credentials, or billing addresses.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="policy-card" id="sec-use">
+        <h2><span class="sec-num">03</span> How Information Is Used</h2>
+        <p>The information collected is used strictly for legitimate operational purposes:</p>
+        <ul>
+            <li>To deliver, maintain, optimize, and improve core gameplay mechanics and stability.</li>
+            <li>To facilitate real-time online matchmaking, friend room joining, and global leaderboards.</li>
+            <li>To verify in-app purchases and unlock entitlements (such as removing ads or granting virtual items).</li>
+            <li>To display contextual or personalized advertisements in compliance with applicable advertising laws.</li>
+            <li>To detect, investigate, and prevent fraudulent activity, cheating, unauthorized bots, or security exploits.</li>
+            <li>To comply with legal obligations and respond to lawful government or regulatory requests.</li>
+        </ul>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="policy-card" id="sec-thirdparty">
+        <h2><span class="sec-num">04</span> Third-Party Partners &amp; SDKs</h2>
+        <p>Our Games integrate carefully vetted, industry-standard third-party Software Development Kits (SDKs) to provide vital infrastructure, advertising, and analytics. Each partner maintains its own privacy policy:</p>
+        <ul>
+            <li><strong>Google Play Services:</strong> Core Android system libraries, billing, and platform services. (<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>)</li>
+            <li><strong>Google AdMob:</strong> Mobile ad serving platform for rewarded videos, interstitial ads, and banners. (<a href="https://support.google.com/admob/answer/6128543" target="_blank" rel="noopener">AdMob Policies</a>)</li>
+            <li><strong>Google User Messaging Platform (UMP / CMP):</strong> IAB-certified Consent Management Platform for gathering GDPR and privacy consent.</li>
+            <li><strong>Google Firebase (Realtime Database &amp; Firestore):</strong> Used for secure cloud synchronization of leaderboards, matchmaking queues, and player presence. (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Overview</a>)</li>
+            <li><strong>CrazyGames SDK:</strong> Used exclusively when accessing browser-based web editions of our games. (<a href="https://www.crazygames.com/privacy" target="_blank" rel="noopener">CrazyGames Privacy Policy</a>)</li>
+        </ul>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="policy-card" id="sec-ads">
+        <h2><span class="sec-num">05</span> Advertising &amp; Google AdMob</h2>
+        <p>Our free-to-play Games are monetized partly through third-party advertising provided by Google AdMob. AdMob uses your device's Mobile Advertising ID to serve ads.</p>
+        <div class="callout">
+            <div class="callout-title">Ad Format Transparency:</div>
+            <p>Our Games utilize strictly capped ad placements, such as voluntary Rewarded Video Ads (which players choose to watch for in-game perks) and frequency-capped Interstitial Ads. We implement strict frequency capping (minimum cooldown timers and death limits) to ensure advertisements never compromise user experience.</p>
+        </div>
+        <p>You can opt out of interest-based personalized advertising at any time through your device settings:</p>
+        <ul>
+            <li><strong>Android:</strong> Settings &gt; Google &gt; Ads &gt; Delete advertising ID or Reset advertising ID.</li>
+            <li><strong>iOS:</strong> Settings &gt; Privacy &amp; Security &gt; Tracking &gt; Toggle off allow apps to ask to track.</li>
+            <li><strong>In-Game:</strong> You can purchase the "Remove Ads" package to permanently eliminate all non-rewarded interstitial ads.</li>
+        </ul>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="policy-card" id="sec-gdpr">
+        <h2><span class="sec-num">06</span> European Privacy Rights (GDPR &amp; UK GDPR)</h2>
+        <p>If you reside in the European Economic Area (EEA), the United Kingdom, or Switzerland, your personal data is protected under the General Data Protection Regulation (GDPR).</p>
+        <ul>
+            <li><strong>Legal Basis for Processing:</strong> We process data based on (1) Performance of a contract (providing you the game services you requested), (2) Legitimate interests (improving game security and balance), and (3) Your explicit Consent (for personalized advertising and cookies).</li>
+            <li><strong>Google Certified CMP:</strong> In compliance with Google AdMob and IAB Europe Transparency and Consent Framework (TCF v2.2), players in the EEA/UK are presented with an official Google User Messaging Platform (UMP) consent dialogue upon initial launch. You have the absolute right to provide consent, manage granular vendor options, or decline ("Do not consent") at any time.</li>
+            <li><strong>Data Subject Rights:</strong> You have the right to request access to, rectification of, or permanent erasure of your data, as well as the right to lodge a complaint with your national data protection supervisory authority.</li>
+        </ul>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="policy-card" id="sec-ccpa">
+        <h2><span class="sec-num">07</span> California Privacy Rights (CCPA / CPRA)</h2>
+        <p>Under the California Consumer Privacy Act, as amended by the California Privacy Rights Act (CPRA), California residents are entitled to specific rights regarding their personal information:</p>
+        <ul>
+            <li><strong>We Do Not Sell Personal Information:</strong> We do not sell your personal data for monetary consideration.</li>
+            <li><strong>Right to Know &amp; Delete:</strong> You have the right to request disclosure of what personal information is collected and request its deletion.</li>
+            <li><strong>Non-Discrimination:</strong> We will never deny you service, charge different prices, or provide a different level of quality for exercising your statutory privacy rights.</li>
+        </ul>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="policy-card" id="sec-coppa">
+        <h2><span class="sec-num">08</span> Children's Privacy (COPPA &amp; Global Protections)</h2>
+        <p>Protecting children's safety online is paramount to us.</p>
+        <ul>
+            <li>Our Games are designed for general audiences and are not directed to children under the age of 13 (or under 16 in the European Union).</li>
+            <li>We do not knowingly collect, request, or solicit personal information from children under 13.</li>
+            <li>If we become aware that personal information has been unintentionally collected from a child under 13 without verified parental consent, we will take immediate measures to purge such information from our records.</li>
+            <li>Parents or legal guardians who believe their child has provided personal information may contact us directly at <a href="mailto:omerfarukiseri21@gmail.com">omerfarukiseri21@gmail.com</a> for immediate deletion.</li>
+        </ul>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="policy-card" id="sec-iap">
+        <h2><span class="sec-num">09</span> In-App Purchases, Virtual Currencies &amp; Digital Items</h2>
+        <p>Our Games may allow players to acquire virtual items, characters, skins, or virtual currencies (e.g., "Gems", "Gold") using real-world money or through gameplay achievements.</p>
+        <div class="callout callout-warning">
+            <div class="callout-title">Legal Terms Regarding Virtual Goods:</div>
+            <p>1. <strong>No Real-World Value:</strong> Virtual currencies and virtual goods constitute a limited, non-exclusive, non-transferable, revocable license to access digital features solely within the game. They hold <strong>zero real-world monetary value</strong> and cannot be redeemed, exchanged, or refunded for legal tender, cash, or real property from the Developer.</p>
+            <p>2. <strong>No Property Rights:</strong> You do not own the virtual items or digital characters; you hold a software license to use them as part of the game client.</p>
+            <p>3. <strong>Refund Policy:</strong> All in-app purchases are final and non-refundable, except as expressly required by the statutory policies of Google Play Store, Apple App Store, or applicable mandatory consumer protection laws.</p>
+        </div>
+    </div>
+
+    <!-- Section 10 -->
+    <div class="policy-card" id="sec-liability">
+        <h2><span class="sec-num">10</span> Limitation of Liability &amp; Disclaimers</h2>
+        <p>This section outlines the legal boundaries of our responsibility to the fullest extent permitted by applicable law:</p>
+
+        <div class="disclaimer-box">
+            <p><strong>"AS IS" AND "AS AVAILABLE" DISCLAIMER:</strong><br>
+            THE GAMES, SERVICES, DIGITAL CONTENT, AND ONLINE MULTIPLAYER FUNCTIONALITY ARE PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, TITLE, NON-INFRINGEMENT, OR UNINTERRUPTED AVAILABILITY.</p>
+            <br>
+            <p><strong>NO LIABILITY FOR INTERRUPTIONS OR DATA LOSS:</strong><br>
+            THE DEVELOPER DOES NOT WARRANT THAT THE GAMES WILL OPERATE ERROR-FREE, SECURELY, OR WITHOUT NETWORK DISRUPTIONS. UNDER NO CIRCUMSTANCES SHALL THE DEVELOPER (ÖMER FARUK İŞERİ) BE LIABLE TO ANY USER OR THIRD PARTY FOR ANY DIRECT, INDIRECT, INCIDENTAL, CONSEQUENTIAL, SPECIAL, EXEMPLARY, OR PUNITIVE DAMAGES ARISING FROM: (A) THE USE OR INABILITY TO USE THE SERVICES; (B) LOSS OF GAME PROGRESS, VIRTUAL CURRENCY, OR UNLOCKED ASSETS DUE TO LOCAL STORAGE CLEARS, APP UNINSTALLATIONS, DEVICE UPGRADES, OR HARDWARE MALFUNCTIONS; (C) NETWORK LATENCY, SERVER DOWNTIME, OR FIREBASE DISCONNECTIONS; OR (D) ACTIONS OR CONTENT OF ANY THIRD-PARTY ADVERTISERS OR EXTERNAL LINKS.</p>
+            <br>
+            <p><strong>MAXIMUM AGGREGATE LIABILITY:</strong><br>
+            IN JURISDICTIONS THAT DO NOT ALLOW THE EXCLUSION OF CERTAIN WARRANTIES OR LIABILITIES, THE MAXIMUM AGGREGATE LIABILITY OF THE DEVELOPER FOR ALL CLAIMS ARISING UNDER OR RELATING TO THE GAMES SHALL NOT EXCEED THE TOTAL AMOUNT ACTUALLY PAID BY YOU TO THE DEVELOPER IN THE THREE (3) MONTHS IMMEDIATELY PRECEDING THE CLAIM, OR FIFTY UNITED STATES DOLLARS ($50.00 USD), WHICHEVER IS LESS.</p>
+        </div>
+    </div>
+
+    <!-- Section 11 -->
+    <div class="policy-card" id="sec-rights">
+        <h2><span class="sec-num">11</span> Data Retention &amp; Permanent Deletion Requests</h2>
+        <p>We retain gameplay and telemetry records only for as long as necessary to fulfill the purposes set out in this Policy. Real-time multiplayer connection tokens are automatically pruned and deleted after sessions terminate.</p>
+        <p><strong>How to Request Data Deletion:</strong><br>
+        If you wish to have your multiplayer display nickname, leaderboard scores, or any cloud-associated records permanently deleted from our databases, you may submit a verifiable deletion request by emailing us at <a href="mailto:omerfarukiseri21@gmail.com">omerfarukiseri21@gmail.com</a> with the subject line <em>"Data Deletion Request"</em> and your in-game nickname. We will process and execute your request within thirty (30) days without undue delay.</p>
+    </div>
+
+    <!-- Section 12 -->
+    <div class="policy-card" id="sec-contact">
+        <h2><span class="sec-num">12</span> Developer Contact &amp; Legal Notices</h2>
+        <p>If you have any questions, inquiries, complaints, or legal notices concerning this Universal Privacy Policy or our software applications, please contact the developer directly:</p>
+
+        <div class="contact-card">
+            <h3 style="margin-top:0; color:#ffffff;">Ömer Faruk İşeri</h3>
+            <p style="margin-bottom:6px;">Independent Game Developer &amp; Creator of Pixel Dash, Neon Blast &amp; Titles</p>
+            <p style="font-family:'JetBrains Mono', monospace; font-size:1rem; color:var(--accent);">omerfarukiseri21@gmail.com</p>
+            <a class="contact-btn" href="mailto:omerfarukiseri21@gmail.com?subject=Privacy%20Policy%20Inquiry">Send Legal Inquiry</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Ömer Faruk İşeri. All rights reserved.</p>
+        <p style="margin-top: 4px; font-size: 0.8rem; color: var(--text-muted);">Pixel Dash: Infinite Maze and associated game assets are proprietary creations of Ömer Faruk İşeri.</p>
+    </footer>
+
+</div>
+
 </body>
 </html>
